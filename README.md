@@ -7,9 +7,9 @@ Future TBD will be an online tool to help prospective students select college ch
 Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors. 
 
 ## Three Stakeholder Types
-High School students preparing to go to college
-College students considering transferring or switching majors
-Post-grads contemplating further schooling or a career change
+- High School students preparing to go to college
+- College students considering transferring or switching majors
+- Post-grads contemplating further schooling or a career change
 
 ## Real-Life Stakeholder
 Michael Johnson - 21 years-old, student Nashua Community College. Considering attending a full-time university.
@@ -29,6 +29,7 @@ Michael Johnson - 21 years-old, student Nashua Community College. Considering at
 
 ###Ordering of Backlog Items
 First, the backlog items are based on necessity in order to avoid blocking. In order to add functionality to the website, the website must be set up first. Then backlog items are sorted based on priority and functionality. The main functionality of the website is the ability to search and compare colleges.
+
 1. The first set of items include setting up the website and any other configurations.
 2. The second set of items include adding a list of colleges and search functionality.
 3. The third set of items include a compare functionality.
