@@ -1,9 +1,10 @@
-# Future TBD
+# future-tbd
 
-## Far Vision
+## Future TBD Vision
+###Far Term
 Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.  
 
-## Near Vision
+### Near Term
 Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors. 
 
 ## Three Stakeholder Types
