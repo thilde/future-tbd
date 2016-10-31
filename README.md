@@ -38,7 +38,7 @@ Michael Johnson - 21 years-old, student Nashua Community College. Considering at
 - Bio: Michael is a 21 year-old part-time community college student residing in Hudson, NH. He is the Assistant Manager for Hudson Public Access TV and hopes to pursue a career in communications or multimedia studies. 
 
 ##Initial Product Backlog
-[Trello Board: Agile Project Team 5](https://trello.com/b/uVkt6NXa/agile-project-team-5)
+[Trello Board: future-tbd](https://trello.com/b/uVkt6NXa/future-tbd)
 
 ###Ordering of Backlog Items
 First, the backlog items are based on necessity in order to avoid blocking. In order to add functionality to the website, the website must be set up first. Then backlog items are sorted based on priority and functionality. The main functionality of the website is the ability to search and compare colleges.
