@@ -1,5 +1,18 @@
 # future-tbd
 
+##Scrum Team Roster
+
+###Product Owner
+- Robert Johnson
+
+###Scrum Master
+- Mason Tan
+
+###Development Team
+- Khalid Aliweh
+- Tyler Hildebrandt
+
+
 ###Far Term Vision
 Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.  
 
@@ -42,3 +55,7 @@ First, the backlog items are based on necessity in order to avoid blocking. In o
 3. Additional details
 4. Estimated in story points
 5. The acceptance criteria is clearly defined
+
+##Estimating
+The team completed a relative size estimating activity on [planningpoker.com](https://www.planningpoker.com).
+
