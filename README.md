@@ -56,5 +56,6 @@ First, the backlog items are based on necessity in order to avoid blocking. In o
 5. The acceptance criteria is clearly defined
 
 ###Estimating
-The team completed a relative size estimating activity on [planningpoker.com](https://www.planningpoker.com)
+The team completed a relative size estimating activity using [PlanITpoker](http://www.planitpoker.com/)
+
 
