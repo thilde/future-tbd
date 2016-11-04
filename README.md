@@ -55,4 +55,11 @@ First, the backlog items are based on necessity in order to avoid blocking. In o
 ###Estimating
 The team completed a relative size estimating activity using [PlanITpoker](http://www.planitpoker.com/)
 
+##Sprint #1
+
+###Forecast
+- 14 story points to be completed.
+- The number 14 is the sum of all the story points of the items in the Sprint Planning list. 
+- Our story points/sprint rate cannot be used to forecast until our first team sprint is completed.
+
 
