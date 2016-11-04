@@ -1,16 +1,12 @@
 # future-tbd
 
-## Scrum Team Roster
-
-### Product Owner
-- Robert Johnson
-
-### Scrum Master
-- Mason Tan
-
-### Development Team
-- Khalid Aliweh
-- Tyler Hildebrandt
+## Roster
+Name | Role
+------------ | -------------
+Robert Johnson | Product Owner
+Mason Tan | Scum Master
+Khalid Aliweh | Developer
+Tyler Hildebrandt | Developer
 
 ## Far Term Vision
 Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.  
@@ -18,7 +14,7 @@ Future TBD will be an online tool to help prospective students select college ch
 ## Near Term Vision
 Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors. 
 
-## Three Stakeholder Types
+## Stakeholder Types
 - High School students preparing to go to college
 - College students considering transferring or switching majors
 - Post-grads contemplating further schooling or a career change
@@ -49,6 +45,7 @@ First, the backlog items are based on necessity in order to avoid blocking. In o
 5. The last set of item is the ability to create an account for saving colleges.
 
 ###Definition of Ready
+
 1. Title
 2. User story opening sentence
 3. Additional details
