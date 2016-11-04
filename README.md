@@ -11,15 +11,17 @@ Tyler Hildebrandt | Developer
 
 ## Vision
 
-> ### Far Term
+### Far Term
 
-> Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.
+Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.
 
-> ### Near Term
+### Near Term
 
-> Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors.
+Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors.
 
 ## Stakeholders
+
+### Types
 
 - **High School students** preparing to go to college
 
@@ -31,26 +33,26 @@ Tyler Hildebrandt | Developer
 
 #### Michael Johnson
 
-**Age:** 21
+- **Age:** 21
 
-**Gender:** Male
+- **Gender:** Male
 
-**Occupation:** TV Station Manager/Student
+- **Occupation:** TV Station Manager/Student
 
-**Location:** Hudson, NH
+- **Location:** Hudson, NH
 
-**Goals**
+- **Goals**
 
-- Earn a four-year degree
-- Minimize cost incurred
-- Maximizing post-college earnings.
+  - Earn a four-year degree
+  - Minimize cost incurred
+  - Maximizing post-college earnings.
 
-**Frustrations**
+- **Frustrations**
 
-- Michael is having difficulty finding solid, accurate information on college costs.
-- Unsure which of his prospective majors has the most potential opportunity.
+  - Michael is having difficulty finding solid, accurate information on college costs.
+  - Unsure which of his prospective majors has the most potential opportunity.
 
-**Bio:** Michael is a 21 year-old part-time community college student at Nashua Community College residing in Hudson, NH. He is the Assistant Manager for Hudson Public Access TV and hopes to pursue a career in communications or multimedia studies.
+- **Bio:** Michael is a 21 year-old part-time community college student at Nashua Community College residing in Hudson, NH. He is the Assistant Manager for Hudson Public Access TV and hopes to pursue a career in communications or multimedia studies.
 
 ## Initial Product Backlog
 
