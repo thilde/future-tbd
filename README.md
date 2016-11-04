@@ -1,65 +1,91 @@
-# future-tbd
+# ![alt text][logo]
 
 ## Roster
-Name | Role
------------- | -------------
-Robert Johnson | Product Owner
-Mason Tan | Scum Master
-Khalid Aliweh | Developer
+
+Name              | Role
+----------------- | -------------
+Robert Johnson    | Product Owner
+Mason Tan         | Scum Master
+Khalid Aliweh     | Developer
 Tyler Hildebrandt | Developer
 
-## Far Term Vision
-Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.  
+## Vision
 
-## Near Term Vision
-Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors. 
+> ### Far Term
 
-## Stakeholder Types
-- High School students preparing to go to college
-- College students considering transferring or switching majors
-- Post-grads contemplating further schooling or a career change
+> Future TBD will be an online tool to help prospective students select college choices and career paths with financial concerns in mind. We will allow students to quickly and easily compare dozens of potential educational and career choices.
 
-## Real-Life Stakeholder
-Michael Johnson - 21 years-old, student Nashua Community College. Considering attending a full-time university.
+> ### Near Term
 
-### User Persona
-- Name: Michael Johnson
-- Age: 21
-- Gender: Male
-- Occupation: TV Station Manager/Student
-- Location: Hudson, NH
-- Goals: Michael’s goal is to earn a four-year degree, while minimizing cost incurred and maximizing post-college earnings.
-- Frustrations: Michael is having difficulty finding solid, accurate information on college costs. In addition, he is not sure which of his prospective majors has the most potential opportunity. 
-- Bio: Michael is a 21 year-old part-time community college student residing in Hudson, NH. He is the Assistant Manager for Hudson Public Access TV and hopes to pursue a career in communications or multimedia studies. 
+> Our first iteration of the product will be a simple comparison site that will present information about costs of college and earning potentials between differing majors.
 
-##Initial Product Backlog
-Trello Board: [future-tbd](https://trello.com/b/uVkt6NXa/future-tbd)
+## Stakeholders
 
-###Ordering of Backlog Items
+- **High School students** preparing to go to college
+
+- **College students** considering transferring or switching majors
+
+- **Post-grads** contemplating further schooling or a career change
+
+### Real-Life Stakeholder
+
+#### Michael Johnson
+
+**Age:** 21
+
+**Gender:** Male
+
+**Occupation:** TV Station Manager/Student
+
+**Location:** Hudson, NH
+
+**Goals**
+
+- Earn a four-year degree
+- Minimize cost incurred
+- Maximizing post-college earnings.
+
+**Frustrations**
+
+- Michael is having difficulty finding solid, accurate information on college costs.
+- Unsure which of his prospective majors has the most potential opportunity.
+
+**Bio:** Michael is a 21 year-old part-time community college student at Nashua Community College residing in Hudson, NH. He is the Assistant Manager for Hudson Public Access TV and hopes to pursue a career in communications or multimedia studies.
+
+## Initial Product Backlog
+
+Trello: [future-tbd](https://trello.com/b/uVkt6NXa/future-tbd)
+
+### Ordering of Backlog Items
+
 First, the backlog items are based on necessity in order to avoid blocking. In order to add functionality to the website, the website must be set up first. Then backlog items are sorted based on priority and functionality. The main functionality of the website is the ability to search and compare colleges.
 
-1. The first set of items include setting up the website and any other configurations.
-2. The second set of items include adding a list of colleges and search functionality.
-3. The third set of items include a compare functionality.
-4. The fourth set of items include functionality of a cost and loan estimator.
-5. The last set of item is the ability to create an account for saving colleges.
+1. Initial website setup
+2. Import college list/data
+3. Search
+4. Compare
+5. Cost and loan estimator
+6. Create account (save work)
 
-###Definition of Ready
+### Definition of Ready
 
-1. Title
-2. User story opening sentence
-3. Additional details
-4. Estimated in story points
-5. The acceptance criteria is clearly defined
+- [ ] Title
+- [ ] User story opening sentence
+- [ ] Additional details
+- [ ] Estimated in story points
+- [ ] The acceptance criteria is clearly defined
 
-###Estimating
-The team completed a relative size estimating activity using [PlanITpoker](http://www.planitpoker.com/)
+### Estimating
 
-##Sprint #1
+The team completed a relative size estimating activity using [PlanITpoker](http://www.planitpoker.com/).
 
-###Forecast
-- 14 story points to be completed.
-- The number 14 is the sum of all the story points of the items in the Sprint Planning list. 
-- Our story points/sprint rate cannot be used to forecast until our first team sprint is completed.
+## Sprint #1
 
+### Forecast
 
+- **14 story points** to be completed
+
+  - This is the aggregate size of the stories in the [Sprint Planning](https://trello.com/b/uVkt6NXa/future-tbd) list
+  - The development team committed to these stories during sprint planning
+
+[logo]: https://github.com/thilde/future-tbd/blob/gh-pages/Logo%20(text)_small.png "future-tbd"
