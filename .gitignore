@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FutureTbd/.vs/config
+/FutureTbd/FutureTbd/bin
+/FutureTbd/FutureTbd/obj/Debug
+/FutureTbd/packages
+/FutureTbd/FutureTbd.Tests/obj/Debug
