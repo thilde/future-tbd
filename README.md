@@ -87,7 +87,7 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
 
 - **14 story points** to be completed
 
-  - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.[Sprint Planning](https://trello.com/b/uVkt6NXa/future-tbd)
+  - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
   - The development team committed to these stories during sprint planning
 
 [logo]: https://github.com/thilde/future-tbd/blob/gh-pages/Logo%20(text)_small.png "future-tbd"
