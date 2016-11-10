@@ -94,4 +94,4 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
 
-[logo]: https://github.com/thilde/future-tbd/blob/gh-pages/Logo%20(text)_small.png "future-tbd"
+[logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
