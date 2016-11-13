@@ -94,7 +94,7 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
 ### Daily Scrums
-During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
+During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
 
 * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
   * Khalid: 
@@ -105,6 +105,7 @@ During our first sprint, our team conducted four scrums. Mason, our Scrum Master
   * Tyler:
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
+  * The biggest impediment expressed by both members of the Development Team was the data source that the team will be using for the project. Multiple ideas were suggested such as creating a back-end database using a .csv file or accessing an API. 
 
 ### Sprint Review
 On 11/13/2016, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. 
