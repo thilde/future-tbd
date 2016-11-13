@@ -94,6 +94,6 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
 ### Sprint Review
-
+On 11/13/2016, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. 
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
