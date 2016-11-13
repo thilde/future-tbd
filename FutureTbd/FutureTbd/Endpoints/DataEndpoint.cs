@@ -7,8 +7,9 @@ namespace FutureTbd.Endpoints
     {
         #region Implementation of IDataEndpoint
 
-        public void Search(string searchText)
+        public string Search(string searchText)
         {
+            return null;
         }
 
         #endregion

@@ -2,6 +2,6 @@
 {
     public interface IDataEndpoint
     {
-        void Search(string searchText);
+        string Search(string searchText);
     }
 }
