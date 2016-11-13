@@ -97,8 +97,12 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
 
 * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
+  Khalid: 
+  Tyler:
 
 * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
+  Khalid:
+  Tyler:
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
 
