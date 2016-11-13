@@ -90,8 +90,10 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
   - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
   - The development team committed to these stories during sprint planning
   
-### Burndowm chart
+### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
+
+### Sprint Review
 
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
