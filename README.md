@@ -101,7 +101,7 @@ During our first sprint, our team conducted four scrums. Mason, our Scrum Master
   * Tyler: I have created a logo for the Future TBD website, subject to the approval of the Product Owner. I also found a suitable API for usage for the project. 
 
 * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid: I will initiate our first mob programming for our assignment. Tyler and I will finish up the unit tests for the website. We will also add an A-TDD test to our test suite.
+  * Khalid: I will initiate our first mob programming for our assignment. Tyler and I will finish up the unit tests for the website. We will also add a BDD test to our test suite.
   * Tyler: I will upload the logo to the website. I will also assist Khalid in programming the website and tests. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
