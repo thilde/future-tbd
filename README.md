@@ -109,6 +109,8 @@ During our first sprint, our team conducted four scrums. Mason, our Scrum Master
   
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
+![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_one.png "Mob Programming")
+
 
 ### Sprint Review
 Halfway through our sprint, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. Here are a couple of key events from sprint review: 
@@ -117,3 +119,4 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
+
