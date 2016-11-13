@@ -90,8 +90,23 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
   - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
   - The development team committed to these stories during sprint planning
   
-### Burndowm chart
+### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
+### Daily Scrums
+During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
+
+* **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
+  * Khalid: 
+  * Tyler:
+
+* **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
+  * Khalid:
+  * Tyler:
+
+* **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
+
+### Sprint Review
+On 11/13/2016, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. 
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
