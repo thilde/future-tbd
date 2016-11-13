@@ -1,25 +1,41 @@
 ﻿using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FutureTbd;
 using FutureTbd.Controllers;
+using NUnit.Framework;
 
 namespace FutureTbd.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
+        #region Index
+
+        [Test]
+        public void GivenRequestToIndex_WhenCallingIndex_ThenResultIsNotNull()
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            var controller = new HomeController();
+            var result = controller.Index() as ViewResult;
 
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Home Page", result.ViewBag.Title);
+            Assert.That(result, Is.Not.Null);
         }
+
+        [Test]
+        public void GivenRequestToIndex_WhenCallingIndex_ThenIndexPageTitleIsSetCorrectly()
+        {
+            var controller = new HomeController();
+            var result = controller.Index() as ViewResult;
+
+            Assert.That(result.ViewBag.Title, Is.EqualTo(HomeController.HOME_PAGE_TITLE));
+        }
+
+        [Test]
+        public void GivenRequestToIndex_WhenCallingIndex_ThenIndexViewIsReturned()
+        {
+            var controller = new HomeController();
+            var result = controller.Index() as ViewResult;
+
+            Assert.That(result.ViewName, Is.EqualTo("Index"));
+        }
+
+        #endregion
     }
 }
