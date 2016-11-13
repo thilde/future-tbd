@@ -108,6 +108,9 @@ During our first sprint, our team conducted four scrums. Mason, our Scrum Master
   * The biggest impediment expressed by both members of the Development Team was the data source that the team will be using for the project. Multiple ideas were suggested such as creating a back-end database using a .csv file or accessing an API. 
 
 ### Sprint Review
-On 11/13/2016, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. 
+Halfway through our sprint, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. Here are a couple of key events from sprint review: 
+* The Development Team presented the first version of the website.
+* Our stakeholder was pleased with the direction the product was headed. He noted that he wanted us to make sure were were focused on both college costs and college outcomes. 
+* The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
