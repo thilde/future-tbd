@@ -96,11 +96,11 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 ### Daily Scrums
 During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the team members what they had been working on and what impediments they were facing. Here is an example of a daily Scrum: 
 
-# What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?
+*What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?
 
-# What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?
+*What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?
 
-# Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?
+*Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?
 
 ### Sprint Review
 On 11/13/2016, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. 
