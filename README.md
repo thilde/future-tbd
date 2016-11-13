@@ -97,7 +97,7 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
 
 * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
-  * Khalid: I committed the initial codebase for the product to github. 
+  * Khalid: I committed the initial codebase for the product to github. Also, I created tests for our project. 
   * Tyler: I have created a logo for the Future TBD website, subject to the approval of the product owner. I also found a suitable API for usage for the project. 
 
 * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
