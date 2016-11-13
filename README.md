@@ -97,15 +97,18 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 During our first sprint, our team conducted four scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum: 
 
 * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
-  * Khalid: I committed the initial codebase for the product to github. Also, I created tests for our project. 
-  * Tyler: I have created a logo for the Future TBD website, subject to the approval of the product owner. I also found a suitable API for usage for the project. 
+  * Khalid: I committed the initial codebase for the product to github. Also, I created a test suite for the project. 
+  * Tyler: I have created a logo for the Future TBD website, subject to the approval of the Product Owner. I also found a suitable API for usage for the project. 
 
 * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid:
-  * Tyler: I will upload the logo to the website. 
+  * Khalid: I will initiate our first mob programming for our assignment. Tyler and I will finish up the unit tests for the website. We will also add an A-TDD test to our test suite.
+  * Tyler: I will upload the logo to the website. I will also assist Khalid in programming the website and tests. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
-  * The biggest impediment expressed by both members of the Development Team was the data source that the team will be using for the project. Multiple ideas were suggested such as creating a back-end database using a .csv file or accessing an API. 
+  * The biggest impediment expressed by both members of the Development Team was the data source that the team will be using for the project. Multiple ideas were suggested such as creating a back-end database using a .csv file or accessing an API. The team ultimately found an API from data.gov that was deemed suitable for usage in the project. 
+  
+### Mob Programming
+Here is a screenshot of one of our team's mob programming sessions.
 
 ### Sprint Review
 Halfway through our sprint, we conducted our first sprint review. Our stakeholder, Michael Johnson, was able to provide some early feedback on the product and the product design. Here are a couple of key events from sprint review: 
