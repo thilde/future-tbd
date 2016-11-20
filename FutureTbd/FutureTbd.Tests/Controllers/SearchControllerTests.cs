@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using FutureTbd.Controllers;
 using Moq;
+using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace FutureTbd.Tests.Controllers
@@ -55,7 +56,7 @@ namespace FutureTbd.Tests.Controllers
         public void GivenRequestToSearch_WhenCallingIndex_ThenResultIsNotNull()
         {
             var controller = new SearchController(Mock.Of<IDataEndpoint>());
-            JsonResult result = controller.ExecuteSearch("");
+            string result = controller.ExecuteSearch("");
 
             Assert.That(result, Is.Not.Null);
         }
@@ -64,9 +65,9 @@ namespace FutureTbd.Tests.Controllers
         public void GivenRequestToSearch_WhenCallingSearch_ThenResultIsJsonResult()
         {
             var controller = new SearchController(Mock.Of<IDataEndpoint>());
-            JsonResult result = controller.ExecuteSearch("");
+            string result = controller.ExecuteSearch("");
 
-            Assert.That(result, Is.TypeOf<JsonResult>());
+            Assert.That(result, Is.TypeOf<string>());
         }
 
         [Test]
@@ -88,6 +89,18 @@ namespace FutureTbd.Tests.Controllers
             controller.ExecuteSearch(searchText);
 
             Mock.Get(mockEndpoint).Verify(m => m.Search(searchText), Times.Once());
+        }
+
+        [Test]
+        public void GivenCallToSearch_WhenSearchingText_ThenEndpointSearchResultIsReturned()
+        {
+            const string searchText = "search Text";
+            var resultJson = @"{'metadata': {'total': 1,'page': 0,'per_page': 20},'results': [{'school.name': 'Harvard University'}]}";
+            var mockEndpoint = Mock.Of<IDataEndpoint>();
+            Mock.Get(mockEndpoint).Setup(m => m.Search(It.IsAny<string>())).Returns(resultJson);
+            var controller = new SearchController(mockEndpoint);
+            string result = controller.ExecuteSearch(searchText);
+            Assert.That(result, Is.EqualTo(JsonConvert.SerializeObject(resultJson)));
         }
 
         #endregion

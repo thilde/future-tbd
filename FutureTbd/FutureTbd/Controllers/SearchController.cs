@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 
 namespace FutureTbd.Controllers
 {
@@ -26,11 +28,11 @@ namespace FutureTbd.Controllers
         }
 
         [HttpPost]
-        public JsonResult ExecuteSearch(string searchText)
+        public string  ExecuteSearch(string searchText)
         {
             ViewBag.Title = SEARCH_PAGE_TITLE;
-            _dataEndpoint.Search(searchText);
-            return Json("");
+            
+            return _dataEndpoint.Search(searchText);
         }
     }
 }

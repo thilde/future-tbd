@@ -1,15 +1,62 @@
 ﻿@section scripts{
 
-@Scripts.Render("~/Scripts/Search/searchScript.js")
-
+    @Scripts.Render("~/Scripts/Search/searchScript.js")
 
 }
 <div class="container">
     <div class="row">
         <div class="col-xs-12" style="margin-top: 40px;">
-         
+
             <input id="searchInput" class="input-group form-control" type="text" style="display: inline; width: 500px;" placeholder="Search"/>
-            <a id="searchLink"class="btn btn-info" style="margin-left: 10px;" >Search<span class="glyphicon glyphicon-search" style="margin-left: 15px;"></span></a>
+            <a data-bind="click: ExecuteSearch" id="searchLink"class="btn btn-info" style="margin-left: 10px;">Search<span class="glyphicon glyphicon-search" style="margin-left: 15px;"></span></a>
         </div>
     </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <span>Result: </span>
+        <span data-bind="text: TotalResults"></span>
+    </div>
+
+    <div class="row" data-bind="visible: SearchResultItems().length>0">
+
+        <table class="table table-striped table-hover" style="cursor: pointer;">
+            <thead>
+            <tr>
+                <td>
+                    <b> School Name</b>
+                </td>
+                <td>
+                    <b>Admission Rate</b>
+                </td>
+                <td>
+                    <b>
+                        Size
+                    </b>
+                </td>
+                <td>
+                    <b>
+                        Address
+                    </b>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!-- ko foreach: SearchResultItems-->
+            <tr>
+                <td data-bind="text: Name"></td>
+                <td data-bind="text: admissionOverallRate"></td>
+                <td data-bind="text: size"></td>
+                <td data-bind="text: address"></td>
+            </tr>
+            <!--/ko-->
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
 </div>
