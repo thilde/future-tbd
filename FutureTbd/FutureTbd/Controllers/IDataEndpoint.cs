@@ -1,7 +1,9 @@
-﻿namespace FutureTbd.Controllers
+﻿using FutureTbd.Models;
+
+namespace FutureTbd.Controllers
 {
     public interface IDataEndpoint
     {
-        string Search(string searchText);
+        SearchResult Search(string searchText);
     }
 }

@@ -31,8 +31,9 @@ namespace FutureTbdAtdd
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Search", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Search", "\tIn order to find more information about a specific university\t\r\n\tAs a highschool" +
+                    " student\r\n\tI want to be able to search the university by it\'s name to find more " +
+                    "information", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,11 +67,13 @@ namespace FutureTbdAtdd
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Simple Search Doesn\'t return Null")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("basic")]
+        [NUnit.Framework.CategoryAttribute("search")]
         public virtual void SimpleSearchDoesnTReturnNull()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Simple Search Doesn\'t return Null", new string[] {
-                        "mytag"});
+                        "basic",
+                        "search"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -79,6 +82,92 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then("Result is not \"null\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Using a Null Search Term returns Error Message")]
+        public virtual void SearchUsingANullSearchTermReturnsErrorMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Using a Null Search Term returns Error Message", ((string[])(null)));
+#line 12
+ this.ScenarioSetup(scenarioInfo);
+#line 13
+ testRunner.Given("Search For null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+ testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.Then("Result contains error \"The search term cannot be null\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Using an Empty String Search Term returns Error Message")]
+        public virtual void SearchUsingAnEmptyStringSearchTermReturnsErrorMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Using an Empty String Search Term returns Error Message", ((string[])(null)));
+#line 17
+ this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.Given("Search For \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.Then("Result contains error \"The search term cannot be empty\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Using an White Space Search Term returns Error Message")]
+        public virtual void SearchUsingAnWhiteSpaceSearchTermReturnsErrorMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Using an White Space Search Term returns Error Message", ((string[])(null)));
+#line 23
+ this.ScenarioSetup(scenarioInfo);
+#line 24
+ testRunner.Given("Search For \"  \"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.Then("Result contains error \"The search term cannot be empty\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Using a Short Search Term returns Error Message")]
+        public virtual void SearchUsingAShortSearchTermReturnsErrorMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Using a Short Search Term returns Error Message", ((string[])(null)));
+#line 29
+ this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.Given("Search For \"HA\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("Result contains error \"The search term should be longer than 2 characters.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Using a Very Long Search Term returns Error Message")]
+        public virtual void SearchUsingAVeryLongSearchTermReturnsErrorMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Using a Very Long Search Term returns Error Message", ((string[])(null)));
+#line 34
+ this.ScenarioSetup(scenarioInfo);
+#line 35
+ testRunner.Given("Search For \"HA1111111111111111111111111111111111111111111111111111111111111111111" +
+                    "11111111111111111111111111111111111111111\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 36
+ testRunner.When("Searching", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+ testRunner.Then("Result contains error \"The search term cannot be longer than 100 characters.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

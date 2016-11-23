@@ -12,12 +12,13 @@ function SearchResultViewModel() {
             contentType: "application/json; charset=utf-8",
             type: "POST",
             success: function(result) {
-                var jsonResult = JSON.parse(result);
-                $.each(jsonResult.results, function(key) {
+                var jsonResult = JSON.parse(result.ResultString);
+
+                self.SearchResultItems([]);
+                $.each(jsonResult.results, function (key) {
                     self.SearchResultItems.push(new ResultItem(jsonResult.results[key]));
                 });
                 self.TotalResults(jsonResult.metadata.total);
-
                 console.log(result);
             }
         });
