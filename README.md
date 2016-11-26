@@ -123,6 +123,7 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 ### Forecast
 
 ### Burndown chart
+The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
 ### Daily Scrums
 
