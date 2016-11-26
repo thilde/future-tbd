@@ -118,5 +118,9 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 * Our stakeholder was pleased with the direction the product was headed. He noted that he wanted us to make sure were were focused on both college costs and college outcomes. 
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
+## Sprint #2
+
+### Forecast
+
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
 
