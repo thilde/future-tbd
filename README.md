@@ -122,5 +122,28 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 
 ### Forecast
 
+### Burndown chart
+
+### Daily Scrums
+
+* **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
+  * Khalid: 
+  * Tyler: 
+  
+ * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
+  * Khalid: 
+  * Tyler: 
+
+* **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
+  * Lorem Ipsum 
+  
+### Mob Programming
+
+### Continuous Integration
+
+### Continuous Deployment
+
+### Sprint Review
+
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
 
