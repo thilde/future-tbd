@@ -122,18 +122,24 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 
 ### Forecast
 
+- **15 story points** to be completed
+
+  - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
+  - The development team committed to these stories during sprint planning
+  
 ### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
 ### Daily Scrums
+During this sprint, our team conducted five scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum:
 
-* **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
-  * Khalid:
-  * Tyler: 
+ * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
+  * Khalid: I implemented API calls from the College Scorecard API. We can now search for a list of colleges in our web app.
+  * Tyler: I worked on getting the continuous integration and continuous deployment systems running. 
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid: 
-  * Tyler: 
+  * Khalid: I will add output pulled from the API for certain data regarding the colleges, such as size and acceptance rates. Additioanlly, I will add more tests to our test suite. 
+  * Tyler: I will continue to work on our CI/CD tools. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
   * There was much concern over what CI and CD tools to use for this sprint cycle. Different systems were suggested, and we weighed the pros and cons of each. Certain team members had more experience with various platforms, and time considerations were also discussed. This was by far the biggest impediment that we faced during this sprint, but eventually consensus was reached. 
@@ -151,6 +157,7 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 * Michael mentioned that he would liek to see either a calculation of college costs and/or a graphical representation on the website.
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
+## URL to Product
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
 
