@@ -159,7 +159,7 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 * Michael mentioned that he would now like to see either a calculation of college costs and/or a graphical representation on the website.
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
-### URL to Product
+### Product
 
-[logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
+URL: future-tbd.com
 
