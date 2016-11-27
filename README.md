@@ -146,6 +146,11 @@ Here is a screenshot of one of our team's mob programming sessions.
 
 
 ### Sprint Review
+Halfway through this sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some early feedback on the website. Here are a couple of key events from sprint review: 
+* The Development Team presented a new version of the website with searchable colleges. 
+* Michael mentioned that he would liek to see either a calculation of college costs and/or a graphical representation on the website.
+* The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
+
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
 
