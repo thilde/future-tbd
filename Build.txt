@@ -1,0 +1,1221 @@
+2016-11-27T00:32:51.6695244Z ##[section]Starting: Build
+2016-11-27T00:32:51.6875267Z Current agent version: '2.109.1'
+2016-11-27T00:32:52.5555251Z Downloading task: NuGetInstaller
+2016-11-27T00:32:55.8139792Z Downloading task: VSBuild
+2016-11-27T00:32:56.3248955Z Downloading task: VSTest
+2016-11-27T00:32:58.3409354Z Downloading task: PublishSymbols
+2016-11-27T00:32:59.7187755Z Downloading task: PublishBuildArtifacts
+2016-11-27T00:33:00.7167922Z ##[section]Starting: Get Sources
+2016-11-27T00:33:00.8417910Z Syncing repository: thilde/future-tbd (GitHub)
+2016-11-27T00:33:00.8497921Z Prepending Path environment variable with directory containing 'git.exe'.
+2016-11-27T00:33:00.8657922Z ##[command]git version
+2016-11-27T00:33:01.0933133Z ##[command]git init "C:\a\1\s"
+2016-11-27T00:33:01.1623133Z Initialized empty Git repository in C:/a/1/s/.git/
+2016-11-27T00:33:01.1673133Z ##[command]git remote add origin https://github.com/thilde/future-tbd.git
+2016-11-27T00:33:01.2013229Z ##[command]git config gc.auto 0
+2016-11-27T00:33:01.2333126Z ##[command]git config --get-all http.https://github.com/thilde/future-tbd.git.extraheader
+2016-11-27T00:33:01.2643127Z ##[command]git config --get-all http.proxy
+2016-11-27T00:33:01.3023123Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ********" fetch --tags --prune --progress origin
+2016-11-27T00:33:03.2487309Z remote: Counting objects: 465, done.        
+2016-11-27T00:33:03.2487309Z remote: Compressing objects:   2% (1/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:   5% (2/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:   8% (3/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  11% (4/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  14% (5/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  17% (6/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  20% (7/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  22% (8/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  25% (9/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  28% (10/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  31% (11/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  34% (12/35)           
+2016-11-27T00:33:03.2530265Z remote: Compressing objects:  37% (13/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  40% (14/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  42% (15/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  45% (16/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  48% (17/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  51% (18/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  54% (19/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  57% (20/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  60% (21/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  62% (22/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  65% (23/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  68% (24/35)           
+2016-11-27T00:33:03.2540358Z remote: Compressing objects:  71% (25/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  74% (26/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  77% (27/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  80% (28/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  82% (29/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  85% (30/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  88% (31/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  91% (32/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  94% (33/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects:  97% (34/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects: 100% (35/35)           
+2016-11-27T00:33:03.2550374Z remote: Compressing objects: 100% (35/35), done.        
+2016-11-27T00:33:04.2278525Z Receiving objects:   0% (1/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   1% (5/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   2% (10/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   3% (14/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   4% (19/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   5% (24/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   6% (28/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   7% (33/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   8% (38/465)   
+2016-11-27T00:33:04.2328639Z Receiving objects:   9% (42/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  10% (47/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  11% (52/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  12% (56/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  13% (61/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  14% (66/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  15% (70/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  16% (75/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  17% (80/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  18% (84/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  19% (89/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  20% (93/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  21% (98/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  22% (103/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  23% (107/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  24% (112/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  25% (117/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  26% (121/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  27% (126/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  28% (131/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  29% (135/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  30% (140/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  31% (145/465)   
+2016-11-27T00:33:04.2338645Z Receiving objects:  32% (149/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  33% (154/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  34% (159/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  35% (163/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  36% (168/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  37% (173/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  38% (177/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  39% (182/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  40% (186/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  41% (191/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  42% (196/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  43% (200/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  44% (205/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  45% (210/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  46% (214/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  47% (219/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  48% (224/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  49% (228/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  50% (233/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  51% (238/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  52% (242/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  53% (247/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  54% (252/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  55% (256/465)   
+2016-11-27T00:33:04.2348713Z Receiving objects:  56% (261/465)   
+2016-11-27T00:33:04.2378675Z Receiving objects:  57% (266/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  58% (270/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  59% (275/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  60% (279/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  61% (284/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  62% (289/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  63% (293/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  64% (298/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  65% (303/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  66% (307/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  67% (312/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  68% (317/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  69% (321/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  70% (326/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  71% (331/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  72% (335/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  73% (340/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  74% (345/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  75% (349/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  76% (354/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  77% (359/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  78% (363/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  79% (368/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  80% (372/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  81% (377/465)   
+2016-11-27T00:33:04.2388645Z Receiving objects:  82% (382/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  83% (386/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  84% (391/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  85% (396/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  86% (400/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  87% (405/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  88% (410/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  89% (414/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  90% (419/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  91% (424/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  92% (428/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  93% (433/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  94% (438/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  95% (442/465)   
+2016-11-27T00:33:04.2398645Z remote: Total 465 (delta 15), reused 0 (delta 0), pack-reused 430        
+2016-11-27T00:33:04.2398645Z Receiving objects:  96% (447/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  97% (452/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  98% (456/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects:  99% (461/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects: 100% (465/465)   
+2016-11-27T00:33:04.2398645Z Receiving objects: 100% (465/465), 1.69 MiB | 0 bytes/s, done.
+2016-11-27T00:33:04.2398645Z Resolving deltas:   0% (0/183)   
+2016-11-27T00:33:04.2398645Z Resolving deltas:   2% (4/183)   
+2016-11-27T00:33:04.2398645Z Resolving deltas:   4% (8/183)   
+2016-11-27T00:33:04.2398645Z Resolving deltas:   7% (14/183)   
+2016-11-27T00:33:04.2398645Z Resolving deltas:   9% (18/183)   
+2016-11-27T00:33:04.2398645Z Resolving deltas:  10% (20/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  13% (24/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  14% (27/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  15% (28/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  16% (31/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  19% (36/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  21% (40/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  23% (43/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  26% (48/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  28% (52/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  31% (57/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  32% (59/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  33% (62/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  34% (64/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  35% (65/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  37% (69/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  39% (73/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  42% (77/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  43% (79/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  44% (82/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  46% (85/183)   
+2016-11-27T00:33:04.2408640Z Resolving deltas:  48% (88/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  49% (90/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  50% (93/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  51% (94/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  52% (96/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  53% (97/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  54% (99/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  56% (104/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  57% (106/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  61% (112/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  71% (130/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  78% (143/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  81% (150/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  83% (153/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  84% (154/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  85% (156/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  91% (167/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  94% (173/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  97% (179/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  98% (180/183)   
+2016-11-27T00:33:04.2418669Z Resolving deltas:  99% (182/183)   
+2016-11-27T00:33:04.2428644Z Resolving deltas: 100% (183/183)   
+2016-11-27T00:33:04.2428644Z Resolving deltas: 100% (183/183), done.
+2016-11-27T00:33:04.3182435Z From https://github.com/thilde/future-tbd
+2016-11-27T00:33:04.3182435Z  * [new branch]      master     -> origin/master
+2016-11-27T00:33:04.3402435Z ##[command]git checkout --progress --force f494ed920a03d2aa5e08b15d8851391feb429345
+2016-11-27T00:33:04.4422425Z Note: checking out 'f494ed920a03d2aa5e08b15d8851391feb429345'.
+2016-11-27T00:33:04.4422425Z 
+2016-11-27T00:33:04.4422425Z You are in 'detached HEAD' state. You can look around, make experimental
+2016-11-27T00:33:04.4422425Z changes and commit them, and you can discard any commits you make in this
+2016-11-27T00:33:04.4422425Z state without impacting any branches by performing another checkout.
+2016-11-27T00:33:04.4422425Z 
+2016-11-27T00:33:04.4422425Z If you want to create a new branch to retain commits you create, you may
+2016-11-27T00:33:04.4422425Z do so (now or later) by using -b with the checkout command again. Example:
+2016-11-27T00:33:04.4422425Z 
+2016-11-27T00:33:04.4432437Z   git checkout -b <new-branch-name>
+2016-11-27T00:33:04.4432437Z 
+2016-11-27T00:33:04.4432437Z HEAD is now at f494ed9... adding nunit adapter
+2016-11-27T00:33:04.4492426Z ##[section]Finishing: Get Sources
+2016-11-27T00:33:04.4522428Z ##[section]Starting: NuGet restore **/*.sln
+2016-11-27T00:33:04.4962435Z ==============================================================================
+2016-11-27T00:33:04.4962435Z Task         : NuGet Installer
+2016-11-27T00:33:04.4962435Z Description  : Installs or restores missing NuGet packages
+2016-11-27T00:33:04.4962435Z Version      : 0.2.24
+2016-11-27T00:33:04.4962435Z Author       : Microsoft Corporation
+2016-11-27T00:33:04.4962435Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkID=613747)
+2016-11-27T00:33:04.4962435Z ==============================================================================
+2016-11-27T00:33:05.5613406Z [command]C:\Windows\system32\chcp.com 65001
+2016-11-27T00:33:05.5913408Z Active code page: 65001
+2016-11-27T00:33:05.6923417Z Detected NuGet version 3.3.0.212 / 3.3.0
+2016-11-27T00:33:05.6983406Z SYSTEMVSSCONNECTION exists true
+2016-11-27T00:33:05.6993413Z To connect to NuGet feeds hosted in your Team Services account/TFS project collection on this build agent, edit your build definition to choose a higher version of nuget or specify a path to a NuGet.config containing the package sources you wish to use.
+2016-11-27T00:33:05.7033411Z [command]C:\a\_tasks\NuGetInstaller_333b11bd-d341-40d9-afcf-b32d5ce6f23b\0.2.24\node_modules\nuget-task-common\NuGet\3.3.0\NuGet.exe restore -NonInteractive C:\a\1\s\FutureTbd\FutureTbd.sln
+2016-11-27T00:33:07.0623815Z MSBuild auto-detection: using msbuild version '14.0' from 'C:\Program Files (x86)\MSBuild\14.0\bin'.
+2016-11-27T00:33:07.5365980Z Feeds used:
+2016-11-27T00:33:07.5375985Z   C:\Users\buildguest\AppData\Local\NuGet\Cache
+2016-11-27T00:33:07.5375985Z   https://api.nuget.org/v3/index.json
+2016-11-27T00:33:07.5375985Z 
+2016-11-27T00:33:07.5675979Z Restoring NuGet package bootstrap.3.0.0.
+2016-11-27T00:33:07.5845980Z Restoring NuGet package Antlr.3.4.1.9004.
+2016-11-27T00:33:07.6225976Z Restoring NuGet package CommonServiceLocator.1.3.0.
+2016-11-27T00:33:07.6245979Z Restoring NuGet package EntityFramework.6.1.3.
+2016-11-27T00:33:07.6245979Z Restoring NuGet package jQuery.1.10.2.
+2016-11-27T00:33:07.6245979Z Restoring NuGet package jQuery.Validation.1.11.1.
+2016-11-27T00:33:07.6245979Z Restoring NuGet package knockoutjs.3.4.0.
+2016-11-27T00:33:07.6255982Z Restoring NuGet package Microsoft.AspNet.Identity.Core.2.2.1.
+2016-11-27T00:33:07.6265980Z Restoring NuGet package Microsoft.AspNet.Identity.EntityFramework.2.2.1.
+2016-11-27T00:33:07.6265980Z Restoring NuGet package Microsoft.AspNet.Identity.Owin.2.2.1.
+2016-11-27T00:33:07.6275978Z Restoring NuGet package Microsoft.AspNet.Mvc.5.2.3.
+2016-11-27T00:33:07.6275978Z Restoring NuGet package Microsoft.AspNet.Razor.3.2.3.
+2016-11-27T00:33:07.6285978Z Restoring NuGet package Microsoft.AspNet.Web.Optimization.1.1.3.
+2016-11-27T00:33:07.6285978Z Restoring NuGet package Microsoft.AspNet.WebApi.5.2.3.
+2016-11-27T00:33:07.6285978Z Restoring NuGet package Microsoft.AspNet.WebApi.Client.5.2.3.
+2016-11-27T00:33:07.6295976Z Restoring NuGet package Microsoft.AspNet.WebApi.Core.5.2.3.
+2016-11-27T00:33:08.1840252Z Adding package 'bootstrap.3.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:08.2050254Z Added package 'bootstrap.3.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:08.2060255Z Restoring NuGet package Microsoft.AspNet.WebApi.HelpPage.5.2.3.
+2016-11-27T00:33:08.2720251Z Adding package 'Microsoft.AspNet.WebApi.HelpPage.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.0676178Z Added package 'Microsoft.AspNet.WebApi.HelpPage.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.0696181Z Restoring NuGet package Microsoft.AspNet.WebApi.Owin.5.2.3.
+2016-11-27T00:33:11.0756180Z Adding package 'Microsoft.AspNet.WebApi.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.0776174Z Added package 'Microsoft.AspNet.WebApi.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.0796171Z Restoring NuGet package Microsoft.AspNet.WebApi.WebHost.5.2.3.
+2016-11-27T00:33:11.5808954Z Adding package 'CommonServiceLocator.1.3.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.5868956Z Adding package 'jQuery.Validation.1.11.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.5998936Z Added package 'CommonServiceLocator.1.3.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6148960Z Restoring NuGet package Microsoft.AspNet.WebPages.3.2.3.
+2016-11-27T00:33:11.6158969Z Adding package 'Microsoft.AspNet.Identity.Owin.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6158969Z Adding package 'Microsoft.AspNet.Identity.EntityFramework.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6158969Z Added package 'jQuery.Validation.1.11.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6158969Z Restoring NuGet package Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0.
+2016-11-27T00:33:11.6250625Z Added package 'Microsoft.AspNet.Identity.Owin.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6250625Z Restoring NuGet package Microsoft.jQuery.Unobtrusive.Validation.3.2.3.
+2016-11-27T00:33:11.6398959Z Adding package 'Microsoft.AspNet.Web.Optimization.1.1.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6398959Z Added package 'Microsoft.AspNet.Identity.EntityFramework.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6408961Z Restoring NuGet package Microsoft.Net.Compilers.1.0.0.
+2016-11-27T00:33:11.6458961Z Adding package 'Antlr.3.4.1.9004' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6578959Z Added package 'Microsoft.AspNet.Web.Optimization.1.1.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6628959Z Restoring NuGet package Microsoft.Owin.3.0.1.
+2016-11-27T00:33:11.6888959Z Added package 'Antlr.3.4.1.9004' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.6888959Z Restoring NuGet package Microsoft.Owin.Host.SystemWeb.3.0.1.
+2016-11-27T00:33:11.7188958Z Adding package 'knockoutjs.3.4.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.7948954Z Adding package 'Microsoft.AspNet.Identity.Core.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8018957Z Adding package 'Microsoft.AspNet.WebApi.Core.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8148953Z Added package 'knockoutjs.3.4.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8148953Z Restoring NuGet package Microsoft.Owin.Security.3.0.1.
+2016-11-27T00:33:11.8288933Z Adding package 'Microsoft.AspNet.Razor.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8398958Z Adding package 'Microsoft.AspNet.WebApi.Client.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8508960Z Adding package 'jQuery.1.10.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8888953Z Added package 'Microsoft.AspNet.Identity.Core.2.2.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8898951Z Restoring NuGet package Microsoft.Owin.Security.Cookies.3.0.1.
+2016-11-27T00:33:11.8898951Z Adding package 'Microsoft.AspNet.Mvc.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.8968958Z Added package 'Microsoft.AspNet.Razor.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9028954Z Adding package 'Microsoft.Owin.Security.Cookies.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9058959Z Restoring NuGet package Microsoft.Owin.Security.Facebook.3.0.1.
+2016-11-27T00:33:11.9308949Z Added package 'Microsoft.Owin.Security.Cookies.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9308949Z Restoring NuGet package Microsoft.Owin.Security.Google.3.0.1.
+2016-11-27T00:33:11.9308949Z Added package 'Microsoft.AspNet.WebApi.Client.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9388955Z Added package 'Microsoft.AspNet.WebApi.Core.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9468950Z Restoring NuGet package Microsoft.Owin.Security.MicrosoftAccount.3.0.1.
+2016-11-27T00:33:11.9468950Z Restoring NuGet package Microsoft.Owin.Security.OAuth.3.0.1.
+2016-11-27T00:33:11.9588947Z Added package 'jQuery.1.10.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:11.9608944Z Restoring NuGet package Microsoft.Owin.Security.Twitter.3.0.1.
+2016-11-27T00:33:12.0338967Z Adding package 'Microsoft.jQuery.Unobtrusive.Validation.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0778956Z Adding package 'Microsoft.AspNet.WebApi.Owin.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0778956Z Adding package 'Microsoft.AspNet.WebApi.WebHost.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0778956Z Adding package 'Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0778956Z Adding package 'Microsoft.Owin.Host.SystemWeb.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0778956Z Added package 'Microsoft.jQuery.Unobtrusive.Validation.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0788961Z Adding package 'Microsoft.Owin.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0938954Z Restoring NuGet package Microsoft.Web.Infrastructure.1.0.0.
+2016-11-27T00:33:12.0948951Z Added package 'Microsoft.AspNet.WebApi.Owin.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0948951Z Added package 'Microsoft.AspNet.WebApi.WebHost.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.0948951Z Restoring NuGet package Modernizr.2.6.2.
+2016-11-27T00:33:12.0948951Z Restoring NuGet package Newtonsoft.Json.6.0.4.
+2016-11-27T00:33:12.1088955Z Added package 'Microsoft.Owin.Host.SystemWeb.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.1188953Z Restoring NuGet package NUnit3TestAdapter.3.6.0.
+2016-11-27T00:33:12.1188953Z Added package 'Microsoft.Owin.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.1288950Z Restoring NuGet package Owin.1.0.0.
+2016-11-27T00:33:12.1398958Z Added package 'Microsoft.AspNet.Mvc.5.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.1398958Z Restoring NuGet package Respond.1.2.0.
+2016-11-27T00:33:12.1418958Z Added package 'Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.1538957Z Restoring NuGet package Unity.4.0.1.
+2016-11-27T00:33:12.2128954Z Adding package 'Respond.1.2.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2268961Z Adding package 'Microsoft.Owin.Security.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2388951Z Added package 'Respond.1.2.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2398953Z Adding package 'Microsoft.Owin.Security.Google.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2398953Z Restoring NuGet package Unity.Mvc.4.0.1.
+2016-11-27T00:33:12.2448954Z Added package 'Microsoft.Owin.Security.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2558953Z Added package 'Microsoft.Owin.Security.Google.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.2558953Z Restoring NuGet package WebActivatorEx.2.0.0.
+2016-11-27T00:33:12.2698959Z Restoring NuGet package WebGrease.1.5.2.
+2016-11-27T00:33:12.2938948Z Adding package 'Microsoft.Owin.Security.Facebook.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3088959Z Adding package 'Microsoft.Owin.Security.Twitter.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3228956Z Added package 'Microsoft.Owin.Security.Facebook.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3238958Z Adding package 'Microsoft.Owin.Security.MicrosoftAccount.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3298955Z Restoring NuGet package Castle.Core.3.3.3.
+2016-11-27T00:33:12.3688954Z Adding package 'Microsoft.Owin.Security.OAuth.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3738959Z Added package 'Microsoft.Owin.Security.MicrosoftAccount.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3768963Z Added package 'Microsoft.Owin.Security.Twitter.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.3948959Z Restoring NuGet package Moq.4.6.38-alpha.
+2016-11-27T00:33:12.3948959Z Restoring NuGet package NUnit.3.5.0.
+2016-11-27T00:33:12.4018955Z Added package 'Microsoft.Owin.Security.OAuth.3.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.4158960Z Restoring NuGet package NUnit.3.0.0.
+2016-11-27T00:33:12.4448958Z Adding package 'Owin.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.4658958Z Added package 'Owin.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.4658958Z Restoring NuGet package SpecFlow.2.1.0.
+2016-11-27T00:33:12.4818955Z Adding package 'Modernizr.2.6.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.5068954Z Adding package 'Microsoft.Web.Infrastructure.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.5288950Z Added package 'Modernizr.2.6.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.5308953Z Added package 'Microsoft.Web.Infrastructure.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.5328957Z Restoring NuGet package SpecRun.NUnit.1.6.0-rc001.
+2016-11-27T00:33:12.5328957Z Restoring NuGet package SpecFlow.NUnit.2.1.0.
+2016-11-27T00:33:12.5818960Z Adding package 'WebActivatorEx.2.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.5918946Z Added package 'WebActivatorEx.2.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.6038959Z Adding package 'Microsoft.AspNet.WebPages.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.6208952Z Restoring NuGet package SpecRun.Runner.1.6.0-rc001.
+2016-11-27T00:33:12.6218952Z Adding package 'Unity.Mvc.4.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.6388953Z Added package 'Unity.Mvc.4.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.6528954Z Added package 'Microsoft.AspNet.WebPages.3.2.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.6968967Z Adding package 'SpecRun.NUnit.1.6.0-rc001' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.7178951Z Added package 'SpecRun.NUnit.1.6.0-rc001' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:12.8588956Z Adding package 'NUnit3TestAdapter.3.6.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.0148958Z Adding package 'Moq.4.6.38-alpha' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.5831938Z Adding package 'Unity.4.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.5911929Z Adding package 'SpecFlow.2.1.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.6201934Z Adding package 'SpecFlow.NUnit.2.1.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.6301931Z Added package 'SpecFlow.NUnit.2.1.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.6441931Z Adding package 'WebGrease.1.5.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.6721936Z Added package 'Moq.4.6.38-alpha' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.6781937Z Added package 'NUnit3TestAdapter.3.6.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.7191943Z Added package 'SpecFlow.2.1.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.7311939Z Added package 'WebGrease.1.5.2' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.7541935Z Added package 'Unity.4.0.1' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:13.9481917Z Adding package 'Castle.Core.3.3.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.2091915Z Adding package 'NUnit.3.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.2331937Z Adding package 'NUnit.3.5.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.3831915Z Added package 'Castle.Core.3.3.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.3831915Z Adding package 'EntityFramework.6.1.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.4131938Z Adding package 'Newtonsoft.Json.6.0.4' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.9111651Z Added package 'Newtonsoft.Json.6.0.4' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:14.9976711Z Added package 'NUnit.3.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.0036710Z Added package 'NUnit.3.5.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.0136709Z Added package 'EntityFramework.6.1.3' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.4066713Z Adding package 'Microsoft.Net.Compilers.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.4466712Z Added package 'Microsoft.Net.Compilers.1.0.0' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.4616703Z Adding package 'SpecRun.Runner.1.6.0-rc001' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.5296714Z Added package 'SpecRun.Runner.1.6.0-rc001' to folder 'C:\a\1\s\FutureTbd\packages'
+2016-11-27T00:33:15.6556721Z ##[section]Finishing: NuGet restore **/*.sln
+2016-11-27T00:33:15.6556721Z ##[section]Starting: Build solution **\*.sln
+2016-11-27T00:33:15.6606723Z ==============================================================================
+2016-11-27T00:33:15.6606723Z Task         : Visual Studio Build
+2016-11-27T00:33:15.6606723Z Description  : Build with MSBuild and set the Visual Studio version property
+2016-11-27T00:33:15.6606723Z Version      : 1.0.45
+2016-11-27T00:33:15.6606723Z Author       : Microsoft Corporation
+2016-11-27T00:33:15.6606723Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkID=613727)
+2016-11-27T00:33:15.6606723Z ==============================================================================
+2016-11-27T00:33:23.4932725Z ##[command]"C:\Program Files (x86)\MSBuild\14.0\bin\msbuild.exe" "C:\a\1\s\FutureTbd\FutureTbd.sln" /nologo /nr:false /dl:CentralLogger,"C:\a\_tasks\VSBuild_71a9a2d3-a98a-4caa-96ab-affca411ecda\1.0.45\ps_modules\MSBuildHelpers\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll";"RootDetailId=0f8a4363-56af-4e00-ae5a-be4fded50be1|SolutionDir=C:\a\1\s\FutureTbd"*ForwardingLogger,"C:\a\_tasks\VSBuild_71a9a2d3-a98a-4caa-96ab-affca411ecda\1.0.45\ps_modules\MSBuildHelpers\Microsoft.TeamFoundation.DistributedTask.MSBuild.Logger.dll" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="C:\a\1\a\\" /p:platform="any cpu" /p:configuration="release" /p:VisualStudioVersion="14.0" /p:_MSDeployUserAgent="VSTS_d147022a-adb5-4555-84f8-6996f8c912a7_build_6_54"
+2016-11-27T00:33:23.5532719Z Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+2016-11-27T00:33:23.5802721Z Build started 11/27/2016 12:33:23 AM.
+2016-11-27T00:33:23.6672722Z Project "C:\a\1\s\FutureTbd\FutureTbd.sln" on node 1 (default targets).
+2016-11-27T00:33:23.6682710Z ValidateSolutionConfiguration:
+2016-11-27T00:33:23.6682710Z   Building solution configuration "release|any cpu".
+2016-11-27T00:33:25.5085449Z The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:25.5085449Z The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:25.5085449Z The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:25.5085449Z The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:25.5951414Z Project "C:\a\1\s\FutureTbd\FutureTbd.sln" (1) is building "C:\a\1\s\FutureTbd\FutureTbd\FutureTbd.csproj" (2) on node 1 (default targets).
+2016-11-27T00:33:25.5951414Z PrepareForBuild:
+2016-11-27T00:33:25.5951414Z   Creating directory "bin\".
+2016-11-27T00:33:25.5961419Z   Creating directory "obj\Release\".
+2016-11-27T00:33:26.5833201Z CoreCompile:
+2016-11-27T00:33:26.5863194Z   C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\build\..\tools\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:C:\a\1\s\FutureTbd\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll /reference:C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll /reference:C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll /reference:C:\a\1\s\FutureTbd\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll /reference:C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll /reference:C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll /reference:C:\a\1\s\FutureTbd\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll /reference:C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" /reference:C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll /reference:C:\a\1\s\FutureTbd\packages\Owin.1.0\lib\net40\Owin.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Drawing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.WebRequest.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Abstractions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.ApplicationServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Entity.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Routing.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" /reference:C:\a\1\s\FutureTbd\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll /reference:C:\a\1\s\FutureTbd\packages\WebGrease.1.5.2\lib\WebGrease.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.Annotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.EventBasedAsync.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tracing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.NetworkInformation.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Requests.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.WebHeaderCollection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.ILGeneration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.Lightweight.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Json.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Security.Principal.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Duplex.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.NetTcp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.RegularExpressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Timer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XmlSerializer.dll" /debug:pdbonly /optimize+ /out:obj\Release\FutureTbd.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output App_Start\BundleConfig.cs App_Start\FilterConfig.cs App_Start\IdentityConfig.cs App_Start\RouteConfig.cs App_Start\Startup.Auth.cs App_Start\UnityConfig.cs App_Start\UnityMvcActivator.cs App_Start\WebApiConfig.cs Areas\HelpPage\ApiDescriptionExtensions.cs Areas\HelpPage\App_Start\HelpPageConfig.cs Areas\HelpPage\Controllers\HelpController.cs Areas\HelpPage\HelpPageAreaRegistration.cs Areas\HelpPage\HelpPageConfigurationExtensions.cs Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs Areas\HelpPage\ModelDescriptions\ModelDescription.cs Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs Areas\HelpPage\ModelDescriptions\ParameterDescription.cs Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs Areas\HelpPage\Models\HelpPageApiModel.cs Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs Areas\HelpPage\SampleGeneration\ImageSample.cs Areas\HelpPage\SampleGeneration\InvalidSample.cs Areas\HelpPage\SampleGeneration\ObjectGenerator.cs Areas\HelpPage\SampleGeneration\SampleDirection.cs Areas\HelpPage\SampleGeneration\TextSample.cs Areas\HelpPage\XmlDocumentationProvider.cs Controllers\AccountController.cs Controllers\HomeController.cs Controllers\IDataEndpoint.cs Controllers\SearchController.cs Endpoints\DataEndpoint.cs Global.asax.cs Models\AccountBindingModels.cs Models\AccountViewModels.cs Models\IdentityModels.cs Models\SearchResult.cs Properties\AssemblyInfo.cs Providers\ApplicationOAuthProvider.cs Results\ChallengeResult.cs Startup.cs "C:\Users\buildguest\AppData\Local\Temp\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs"
+2016-11-27T00:33:33.1736122Z _CopyFilesMarkedCopyLocal:
+2016-11-27T00:33:33.1736122Z   Copying file from "C:\a\1\s\FutureTbd\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" to "bin\Antlr3.Runtime.dll".
+2016-11-27T00:33:33.1746122Z   Copying file from "C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" to "bin\EntityFramework.dll".
+2016-11-27T00:33:33.1776203Z   Copying file from "C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" to "bin\EntityFramework.SqlServer.dll".
+2016-11-27T00:33:33.1786154Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll" to "bin\Microsoft.AspNet.Identity.Core.dll".
+2016-11-27T00:33:33.1796144Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" to "bin\Microsoft.AspNet.Identity.EntityFramework.dll".
+2016-11-27T00:33:33.1796144Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll" to "bin\Microsoft.AspNet.Identity.Owin.dll".
+2016-11-27T00:33:33.1806134Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" to "bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll".
+2016-11-27T00:33:33.1816128Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll" to "bin\Microsoft.Owin.dll".
+2016-11-27T00:33:33.1816128Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll" to "bin\Microsoft.Owin.Host.SystemWeb.dll".
+2016-11-27T00:33:33.1826140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll" to "bin\Microsoft.Owin.Security.Cookies.dll".
+2016-11-27T00:33:33.1826140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll" to "bin\Microsoft.Owin.Security.dll".
+2016-11-27T00:33:33.1836160Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll" to "bin\Microsoft.Owin.Security.Facebook.dll".
+2016-11-27T00:33:33.1836160Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll" to "bin\Microsoft.Owin.Security.Google.dll".
+2016-11-27T00:33:33.1846138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll" to "bin\Microsoft.Owin.Security.MicrosoftAccount.dll".
+2016-11-27T00:33:33.1846138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll" to "bin\Microsoft.Owin.Security.OAuth.dll".
+2016-11-27T00:33:33.1856145Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll" to "bin\Microsoft.Owin.Security.Twitter.dll".
+2016-11-27T00:33:33.1866127Z   Copying file from "C:\a\1\s\FutureTbd\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll" to "bin\Microsoft.Practices.ServiceLocation.dll".
+2016-11-27T00:33:33.1866127Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll" to "bin\Microsoft.Practices.Unity.Configuration.dll".
+2016-11-27T00:33:33.1876142Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll" to "bin\Microsoft.Practices.Unity.dll".
+2016-11-27T00:33:33.1876142Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll" to "bin\Microsoft.Practices.Unity.Mvc.dll".
+2016-11-27T00:33:33.1886122Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll" to "bin\Microsoft.Practices.Unity.RegistrationByConvention.dll".
+2016-11-27T00:33:33.1886122Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" to "bin\Microsoft.Web.Infrastructure.dll".
+2016-11-27T00:33:33.1896140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" to "bin\Newtonsoft.Json.dll".
+2016-11-27T00:33:33.1906131Z   Copying file from "C:\a\1\s\FutureTbd\packages\Owin.1.0\lib\net40\Owin.dll" to "bin\Owin.dll".
+2016-11-27T00:33:33.1906131Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" to "bin\System.Net.Http.Formatting.dll".
+2016-11-27T00:33:33.1916139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" to "bin\System.Web.Helpers.dll".
+2016-11-27T00:33:33.1916139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll" to "bin\System.Web.Http.dll".
+2016-11-27T00:33:33.1926153Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll" to "bin\System.Web.Http.Owin.dll".
+2016-11-27T00:33:33.1936139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" to "bin\System.Web.Http.WebHost.dll".
+2016-11-27T00:33:33.1936139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" to "bin\System.Web.Mvc.dll".
+2016-11-27T00:33:33.1946132Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" to "bin\System.Web.Optimization.dll".
+2016-11-27T00:33:33.1956156Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" to "bin\System.Web.Razor.dll".
+2016-11-27T00:33:33.1986142Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" to "bin\System.Web.WebPages.Deployment.dll".
+2016-11-27T00:33:33.1986142Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" to "bin\System.Web.WebPages.dll".
+2016-11-27T00:33:33.1986142Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" to "bin\System.Web.WebPages.Razor.dll".
+2016-11-27T00:33:33.1986142Z   Copying file from "C:\a\1\s\FutureTbd\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll" to "bin\WebActivatorEx.dll".
+2016-11-27T00:33:33.1986142Z   Copying file from "C:\a\1\s\FutureTbd\packages\WebGrease.1.5.2\lib\WebGrease.dll" to "bin\WebGrease.dll".
+2016-11-27T00:33:33.1996135Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" to "bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml".
+2016-11-27T00:33:33.2006142Z   Copying file from "C:\a\1\s\FutureTbd\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.pdb" to "bin\Microsoft.Practices.ServiceLocation.pdb".
+2016-11-27T00:33:33.2006142Z   Copying file from "C:\a\1\s\FutureTbd\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.xml" to "bin\Microsoft.Practices.ServiceLocation.xml".
+2016-11-27T00:33:33.2016147Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.xml" to "bin\Microsoft.Practices.Unity.xml".
+2016-11-27T00:33:33.2026123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.xml" to "bin\Microsoft.Practices.Unity.Configuration.xml".
+2016-11-27T00:33:33.2026123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.xml" to "bin\Microsoft.Practices.Unity.Mvc.xml".
+2016-11-27T00:33:33.2036131Z   Copying file from "C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.xml" to "bin\Microsoft.Practices.Unity.RegistrationByConvention.xml".
+2016-11-27T00:33:33.2036131Z   Copying file from "C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.xml" to "bin\Newtonsoft.Json.xml".
+2016-11-27T00:33:33.2046141Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.xml" to "bin\System.Net.Http.Formatting.xml".
+2016-11-27T00:33:33.2056143Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" to "bin\System.Web.Helpers.xml".
+2016-11-27T00:33:33.2056143Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.xml" to "bin\System.Web.Http.xml".
+2016-11-27T00:33:33.2066162Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.xml" to "bin\System.Web.Http.WebHost.xml".
+2016-11-27T00:33:33.2076131Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" to "bin\System.Web.Mvc.xml".
+2016-11-27T00:33:33.2086140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.xml" to "bin\System.Web.Optimization.xml".
+2016-11-27T00:33:33.2096126Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" to "bin\System.Web.Razor.xml".
+2016-11-27T00:33:33.2096126Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" to "bin\System.Web.WebPages.xml".
+2016-11-27T00:33:33.2106137Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" to "bin\System.Web.WebPages.Deployment.xml".
+2016-11-27T00:33:33.2116139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" to "bin\System.Web.WebPages.Razor.xml".
+2016-11-27T00:33:33.2116139Z   Copying file from "C:\a\1\s\FutureTbd\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.pdb" to "bin\Antlr3.Runtime.pdb".
+2016-11-27T00:33:33.2126140Z   Copying file from "C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" to "bin\EntityFramework.xml".
+2016-11-27T00:33:33.2156137Z   Copying file from "C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" to "bin\EntityFramework.SqlServer.xml".
+2016-11-27T00:33:33.2166140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.xml" to "bin\Microsoft.AspNet.Identity.Core.xml".
+2016-11-27T00:33:33.2176127Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.xml" to "bin\Microsoft.AspNet.Identity.Owin.xml".
+2016-11-27T00:33:33.2176127Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.xml" to "bin\Microsoft.AspNet.Identity.EntityFramework.xml".
+2016-11-27T00:33:33.2186123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.xml" to "bin\Microsoft.Owin.xml".
+2016-11-27T00:33:33.2186123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.xml" to "bin\Microsoft.Owin.Host.SystemWeb.xml".
+2016-11-27T00:33:33.2196158Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.xml" to "bin\Microsoft.Owin.Security.xml".
+2016-11-27T00:33:33.2196158Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.xml" to "bin\Microsoft.Owin.Security.Facebook.xml".
+2016-11-27T00:33:33.2206138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.xml" to "bin\Microsoft.Owin.Security.Cookies.xml".
+2016-11-27T00:33:33.2206138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.xml" to "bin\Microsoft.Owin.Security.OAuth.xml".
+2016-11-27T00:33:33.2216152Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.xml" to "bin\Microsoft.Owin.Security.Google.xml".
+2016-11-27T00:33:33.2216152Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.xml" to "bin\Microsoft.Owin.Security.Twitter.xml".
+2016-11-27T00:33:33.2226130Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.xml" to "bin\Microsoft.Owin.Security.MicrosoftAccount.xml".
+2016-11-27T00:33:33.2226130Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.xml" to "bin\System.Web.Http.Owin.xml".
+2016-11-27T00:33:33.2276133Z _CopyOutOfDateSourceItemsToOutputDirectory:
+2016-11-27T00:33:33.2276133Z   Creating directory "bin\roslyn".
+2016-11-27T00:33:33.2276133Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\csc.exe" to "bin\roslyn\csc.exe".
+2016-11-27T00:33:33.2286138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" to "bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll".
+2016-11-27T00:33:33.2286138Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.CSharp.dll" to "bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll".
+2016-11-27T00:33:33.2326140Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.dll" to "bin\roslyn\Microsoft.CodeAnalysis.dll".
+2016-11-27T00:33:33.2346128Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll" to "bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll".
+2016-11-27T00:33:33.2386130Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CSharp.Core.targets" to "bin\roslyn\Microsoft.CSharp.Core.targets".
+2016-11-27T00:33:33.2386130Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.VisualBasic.Core.targets" to "bin\roslyn\Microsoft.VisualBasic.Core.targets".
+2016-11-27T00:33:33.2396129Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Collections.Immutable.dll" to "bin\roslyn\System.Collections.Immutable.dll".
+2016-11-27T00:33:33.2406123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Reflection.Metadata.dll" to "bin\roslyn\System.Reflection.Metadata.dll".
+2016-11-27T00:33:33.2406123Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\vbc.exe" to "bin\roslyn\vbc.exe".
+2016-11-27T00:33:33.2416129Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe" to "bin\roslyn\VBCSCompiler.exe".
+2016-11-27T00:33:33.2416129Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe.config" to "bin\roslyn\VBCSCompiler.exe.config".
+2016-11-27T00:33:33.2436119Z _CopyAppConfigFile:
+2016-11-27T00:33:33.2436119Z   Copying file from "Web.config" to "bin\FutureTbd.dll.config".
+2016-11-27T00:33:33.2446146Z CopyFilesToOutputDirectory:
+2016-11-27T00:33:33.2446146Z   Copying file from "obj\Release\FutureTbd.dll" to "bin\FutureTbd.dll".
+2016-11-27T00:33:33.2456138Z   FutureTbd -> C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.dll
+2016-11-27T00:33:33.2456138Z   Copying file from "obj\Release\FutureTbd.pdb" to "bin\FutureTbd.pdb".
+2016-11-27T00:33:33.4008351Z ValidateGlobalPackageSetting:
+2016-11-27T00:33:33.4008351Z   $(PackageAsSingleFile) is true
+2016-11-27T00:33:33.4008351Z   $(PackageFileName) is C:\a\1\a\\FutureTbd.zip. Validating...
+2016-11-27T00:33:33.4018349Z CollectFilesFromIntermediateAssembly:
+2016-11-27T00:33:33.4018349Z   Gather all files from Project items @(IntermediateAssembly). Adding:
+2016-11-27T00:33:33.4018349Z   bin\FutureTbd.dll to bin\FutureTbd.dll
+2016-11-27T00:33:33.4028351Z CollectFilesFromContent:
+2016-11-27T00:33:33.4028351Z   Gather all files from Project items @(Content). Adding:
+2016-11-27T00:33:33.4028351Z   Areas\HelpPage\HelpPage.css;Content\bootstrap.css;Content\bootstrap.min.css;Content\logo_text.png;favicon.ico;fonts\glyphicons-halflings-regular.svg;Global.asax;Scripts\bootstrap.js;Scripts\bootstrap.min.js;Areas\HelpPage\Views\Web.config;Areas\HelpPage\Views\Shared\_Layout.cshtml;Areas\HelpPage\Views\Help\ResourceModel.cshtml;Areas\HelpPage\Views\Help\Index.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml;Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml;Areas\HelpPage\Views\Help\Api.cshtml;Scripts\jquery-1.10.2.js;Scripts\jquery-1.10.2.min.js;Scripts\jquery.validate.js;Scripts\jquery.validate.min.js;Scripts\jquery.validate.unobtrusive.js;Scripts\jquery.validate.unobtrusive.min.js;Scripts\knockout-3.4.0.debug.js;Scripts\knockout-3.4.0.js;Scripts\modernizr-2.6.2.js;Scripts\respond.js;Scripts\respond.min.js;Scripts\Search\searchScript.js;Web.config;Web.Debug.config;Web.Release.config;Areas\HelpPage\Views\_ViewStart.cshtml;Content\Site.css;Scripts\_references.js;Views\Web.config;Views\_ViewStart.cshtml;Views\Home\Index.cshtml;Views\Shared\Error.cshtml;Views\Shared\_Layout.cshtml;Views\Search\Index.cshtml;fonts\glyphicons-halflings-regular.woff;fonts\glyphicons-halflings-regular.ttf;fonts\glyphicons-halflings-regular.eot;packages.config;Scripts\jquery-1.10.2.min.map
+2016-11-27T00:33:33.4048350Z CollectFilesFromIntermediateSatelliteAssembliesWithTargetPath:
+2016-11-27T00:33:33.4048350Z   Gather all files from Project output (IntermediateSatelliteAssembliesWithTargetPath). Adding:
+2016-11-27T00:33:33.4048350Z CollectFilesFromReference:
+2016-11-27T00:33:33.4048350Z   Gather all files from Project items @(ReferenceCopyLocalPaths,ReferenceComWrappersToCopyLocal,ResolvedIsolatedComModules,_DeploymentLooseManifestFile,NativeReferenceFile).
+2016-11-27T00:33:33.4238343Z CollectFilesFromAllExtraReferenceFiles:
+2016-11-27T00:33:33.4238343Z   Gather all files from Project items @(AllExtraReferenceFiles). Adding:
+2016-11-27T00:33:33.4298346Z CollectFilesFrom_SourceItemsToCopyToOutputDirectory:
+2016-11-27T00:33:33.4298346Z   Gather all files from Project items @(_SourceItemsToCopyToOutputDirectoryAlways,_SourceItemsToCopyToOutputDirectory). Adding:
+2016-11-27T00:33:33.4298346Z   bin\roslyn\csc.exe;bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll;bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll;bin\roslyn\Microsoft.CodeAnalysis.dll;bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll;bin\roslyn\Microsoft.CSharp.Core.targets;bin\roslyn\Microsoft.VisualBasic.Core.targets;bin\roslyn\System.Collections.Immutable.dll;bin\roslyn\System.Reflection.Metadata.dll;bin\roslyn\vbc.exe;bin\roslyn\VBCSCompiler.exe;bin\roslyn\VBCSCompiler.exe.config
+2016-11-27T00:33:33.4308349Z CollectFilesFrom_binDeployableAssemblies:
+2016-11-27T00:33:33.4318353Z   Gather all files from Project items @(_binDeployableAssemblies). Adding:
+2016-11-27T00:33:33.4428353Z PipelineCollectFilesPhase:
+2016-11-27T00:33:33.4428353Z   Publish Pipeline Collect Files Phase
+2016-11-27T00:33:33.4428353Z ExcludeGeneratedDebugSymbol:
+2016-11-27T00:33:33.4428353Z   Exclude All Debug Symbols
+2016-11-27T00:33:33.4758353Z PreTransformWebConfig:
+2016-11-27T00:33:33.4758353Z   Found The following for Config tranformation:
+2016-11-27T00:33:33.4758353Z   Web.config
+2016-11-27T00:33:33.4768348Z   Creating directory "C:\a\1\s\FutureTbd\FutureTbd\obj\Release\TransformWebConfig\transformed\Areas\HelpPage\Views\".
+2016-11-27T00:33:33.4778347Z   Creating directory "C:\a\1\s\FutureTbd\FutureTbd\obj\Release\TransformWebConfig\transformed\Views\".
+2016-11-27T00:33:33.4838356Z   Copying Web.config to obj\Release\TransformWebConfig\original\Web.config.
+2016-11-27T00:33:33.4858344Z   Copying C:\a\1\s\FutureTbd\FutureTbd\Web.Release.config to obj\Release\TransformWebConfig\assist\Web.config.
+2016-11-27T00:33:33.4898352Z TransformWebConfigCore:
+2016-11-27T00:33:33.4908350Z   Transforming Source File: C:\a\1\s\FutureTbd\FutureTbd\Web.config
+2016-11-27T00:33:33.5098354Z     Applying Transform File: C:\a\1\s\FutureTbd\FutureTbd\Web.Release.config
+2016-11-27T00:33:33.5428355Z     Output File: obj\Release\TransformWebConfig\transformed\Web.config
+2016-11-27T00:33:33.5638356Z   Transformation succeeded
+2016-11-27T00:33:33.5688355Z PostTransformWebConfig:
+2016-11-27T00:33:33.5698346Z   Transformed Web.config using C:\a\1\s\FutureTbd\FutureTbd\Web.Release.config into obj\Release\TransformWebConfig\transformed\Web.config.
+2016-11-27T00:33:33.5748339Z PipelineTransformPhase:
+2016-11-27T00:33:33.5748339Z   Publish Pipeline Transform Phase
+2016-11-27T00:33:33.5868352Z PreAutoParameterizationWebConfigConnectionStrings:
+2016-11-27T00:33:33.5868352Z   Creating directory "C:\a\1\s\FutureTbd\FutureTbd\obj\Release\CSAutoParameterize\transformed\Areas\HelpPage\Views\".
+2016-11-27T00:33:33.5878348Z   Creating directory "C:\a\1\s\FutureTbd\FutureTbd\obj\Release\CSAutoParameterize\transformed\Views\".
+2016-11-27T00:33:33.5888356Z   Copying Areas\HelpPage\Views\Web.config to obj\Release\CSAutoParameterize\original\Areas\HelpPage\Views\Web.config.
+2016-11-27T00:33:33.5898358Z   Copying Views\Web.config to obj\Release\CSAutoParameterize\original\Views\Web.config.
+2016-11-27T00:33:33.5908358Z   Copying obj\Release\TransformWebConfig\transformed\Web.config to obj\Release\CSAutoParameterize\original\Web.config.
+2016-11-27T00:33:33.6018357Z AutoParameterizationWebConfigConnectionStringsCore:
+2016-11-27T00:33:33.6018357Z   Transforming Source File: C:\a\1\s\FutureTbd\FutureTbd\Areas\HelpPage\Views\Web.config
+2016-11-27T00:33:33.6028355Z     Applying Transform File: <?xml version="1.0"?>
+2016-11-27T00:33:33.6028355Z           <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+2016-11-27T00:33:33.6038354Z             <connectionStrings>
+2016-11-27T00:33:33.6038354Z               <add
+2016-11-27T00:33:33.6038354Z                 connectionString="{% token='$(ReplacableToken_#(parameter)_#(tokennumber))' xpathlocator='name' parameter='$(name)-Web.config Connection String' description='$(name) Connection String used in web.config by the application to access the database.' defaultValue='$(connectionString)' tags='SqlConnectionString' %}"
+2016-11-27T00:33:33.6038354Z                 xdt:Transform="SetTokenizedAttributes(connectionString)" xdt:SupressWarnings="True" />
+2016-11-27T00:33:33.6038354Z             </connectionStrings>
+2016-11-27T00:33:33.6038354Z           </configuration>
+2016-11-27T00:33:33.6058345Z     No element in the source document matches '/configuration/connectionStrings'
+2016-11-27T00:33:33.6058345Z     Not executing SetTokenizedAttributes (transform line 6, 15)
+2016-11-27T00:33:33.6058345Z     Output File: obj\Release\CSAutoParameterize\transformed\Areas\HelpPage\Views\Web.config
+2016-11-27T00:33:33.6068360Z   Transformation succeeded
+2016-11-27T00:33:33.6088349Z   Transforming Source File: C:\a\1\s\FutureTbd\FutureTbd\Views\Web.config
+2016-11-27T00:33:33.6088349Z     Applying Transform File: <?xml version="1.0"?>
+2016-11-27T00:33:33.6088349Z           <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+2016-11-27T00:33:33.6088349Z             <connectionStrings>
+2016-11-27T00:33:33.6088349Z               <add
+2016-11-27T00:33:33.6088349Z                 connectionString="{% token='$(ReplacableToken_#(parameter)_#(tokennumber))' xpathlocator='name' parameter='$(name)-Web.config Connection String' description='$(name) Connection String used in web.config by the application to access the database.' defaultValue='$(connectionString)' tags='SqlConnectionString' %}"
+2016-11-27T00:33:33.6088349Z                 xdt:Transform="SetTokenizedAttributes(connectionString)" xdt:SupressWarnings="True" />
+2016-11-27T00:33:33.6098353Z             </connectionStrings>
+2016-11-27T00:33:33.6098353Z           </configuration>
+2016-11-27T00:33:33.6098353Z     No element in the source document matches '/configuration/connectionStrings'
+2016-11-27T00:33:33.6098353Z     Not executing SetTokenizedAttributes (transform line 6, 15)
+2016-11-27T00:33:33.6098353Z     Output File: obj\Release\CSAutoParameterize\transformed\Views\Web.config
+2016-11-27T00:33:33.6098353Z   Transformation succeeded
+2016-11-27T00:33:33.6098353Z   Transforming Source File: C:\a\1\s\FutureTbd\FutureTbd\obj\Release\TransformWebConfig\transformed\Web.config
+2016-11-27T00:33:33.6108356Z     Applying Transform File: <?xml version="1.0"?>
+2016-11-27T00:33:33.6108356Z           <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+2016-11-27T00:33:33.6108356Z             <connectionStrings>
+2016-11-27T00:33:33.6108356Z               <add
+2016-11-27T00:33:33.6108356Z                 connectionString="{% token='$(ReplacableToken_#(parameter)_#(tokennumber))' xpathlocator='name' parameter='$(name)-Web.config Connection String' description='$(name) Connection String used in web.config by the application to access the database.' defaultValue='$(connectionString)' tags='SqlConnectionString' %}"
+2016-11-27T00:33:33.6108356Z                 xdt:Transform="SetTokenizedAttributes(connectionString)" xdt:SupressWarnings="True" />
+2016-11-27T00:33:33.6108356Z             </connectionStrings>
+2016-11-27T00:33:33.6108356Z           </configuration>
+2016-11-27T00:33:33.6218356Z     Output File: obj\Release\CSAutoParameterize\transformed\Web.config
+2016-11-27T00:33:33.6228347Z   Transformation succeeded
+2016-11-27T00:33:33.6408357Z PostAutoParameterizationWebConfigConnectionStrings:
+2016-11-27T00:33:33.6408357Z   Auto ConnectionString Transformed Areas\HelpPage\Views\Web.config into obj\Release\CSAutoParameterize\transformed\Areas\HelpPage\Views\Web.config.
+2016-11-27T00:33:33.6408357Z   Auto ConnectionString Transformed Views\Web.config into obj\Release\CSAutoParameterize\transformed\Views\Web.config.
+2016-11-27T00:33:33.6418350Z   Auto ConnectionString Transformed obj\Release\TransformWebConfig\transformed\Web.config into obj\Release\CSAutoParameterize\transformed\Web.config.
+2016-11-27T00:33:33.6468360Z PipelineMsdeploySpecificTransformPhase:
+2016-11-27T00:33:33.6468360Z   Publish Pipeline Deploy phase Stage PipelineMsdeploySpecificTransformPhase
+2016-11-27T00:33:33.6478357Z CopyAllFilesToSingleFolderForMsdeploy:
+2016-11-27T00:33:33.6478357Z   Creating directory "obj\Release\Package\PackageTmp".
+2016-11-27T00:33:33.6488346Z   Copying all files to temporary location below for package/publish:
+2016-11-27T00:33:33.6488346Z   obj\Release\Package\PackageTmp.
+2016-11-27T00:33:33.6488346Z   Copying bin\FutureTbd.dll to obj\Release\Package\PackageTmp\bin\FutureTbd.dll.
+2016-11-27T00:33:33.6498350Z   Copying Areas\HelpPage\HelpPage.css to obj\Release\Package\PackageTmp\Areas\HelpPage\HelpPage.css.
+2016-11-27T00:33:33.6508341Z   Copying Content\bootstrap.css to obj\Release\Package\PackageTmp\Content\bootstrap.css.
+2016-11-27T00:33:33.6518346Z   Copying Content\bootstrap.min.css to obj\Release\Package\PackageTmp\Content\bootstrap.min.css.
+2016-11-27T00:33:33.6528357Z   Copying Content\logo_text.png to obj\Release\Package\PackageTmp\Content\logo_text.png.
+2016-11-27T00:33:33.6528357Z   Copying favicon.ico to obj\Release\Package\PackageTmp\favicon.ico.
+2016-11-27T00:33:33.6538350Z   Copying fonts\glyphicons-halflings-regular.svg to obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.svg.
+2016-11-27T00:33:33.6548351Z   Copying Global.asax to obj\Release\Package\PackageTmp\Global.asax.
+2016-11-27T00:33:33.6558351Z   Copying Scripts\bootstrap.js to obj\Release\Package\PackageTmp\Scripts\bootstrap.js.
+2016-11-27T00:33:33.6558351Z   Copying Scripts\bootstrap.min.js to obj\Release\Package\PackageTmp\Scripts\bootstrap.min.js.
+2016-11-27T00:33:33.6568350Z   Copying Areas\HelpPage\Views\Shared\_Layout.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Shared\_Layout.cshtml.
+2016-11-27T00:33:33.6578346Z   Copying Areas\HelpPage\Views\Help\ResourceModel.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\ResourceModel.cshtml.
+2016-11-27T00:33:33.6588349Z   Copying Areas\HelpPage\Views\Help\Index.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\Index.cshtml.
+2016-11-27T00:33:33.6598341Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml.
+2016-11-27T00:33:33.6598341Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml.
+2016-11-27T00:33:33.6608347Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml.
+2016-11-27T00:33:33.6618350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml.
+2016-11-27T00:33:33.6618350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml.
+2016-11-27T00:33:33.6628351Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml.
+2016-11-27T00:33:33.6638343Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml.
+2016-11-27T00:33:33.6638343Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml.
+2016-11-27T00:33:33.6648347Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml.
+2016-11-27T00:33:33.6658350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml.
+2016-11-27T00:33:33.6658350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml.
+2016-11-27T00:33:33.6668349Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml.
+2016-11-27T00:33:33.6678350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml.
+2016-11-27T00:33:33.6678350Z   Copying Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml.
+2016-11-27T00:33:33.6688345Z   Copying Areas\HelpPage\Views\Help\Api.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\Api.cshtml.
+2016-11-27T00:33:33.6698346Z   Copying Scripts\jquery-1.10.2.js to obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.js.
+2016-11-27T00:33:33.6708345Z   Copying Scripts\jquery-1.10.2.min.js to obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.min.js.
+2016-11-27T00:33:33.6718354Z   Copying Scripts\jquery.validate.js to obj\Release\Package\PackageTmp\Scripts\jquery.validate.js.
+2016-11-27T00:33:33.6718354Z   Copying Scripts\jquery.validate.min.js to obj\Release\Package\PackageTmp\Scripts\jquery.validate.min.js.
+2016-11-27T00:33:33.6728350Z   Copying Scripts\jquery.validate.unobtrusive.js to obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.js.
+2016-11-27T00:33:33.6738352Z   Copying Scripts\jquery.validate.unobtrusive.min.js to obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.min.js.
+2016-11-27T00:33:33.6738352Z   Copying Scripts\knockout-3.4.0.debug.js to obj\Release\Package\PackageTmp\Scripts\knockout-3.4.0.debug.js.
+2016-11-27T00:33:33.6748353Z   Copying Scripts\knockout-3.4.0.js to obj\Release\Package\PackageTmp\Scripts\knockout-3.4.0.js.
+2016-11-27T00:33:33.6758344Z   Copying Scripts\modernizr-2.6.2.js to obj\Release\Package\PackageTmp\Scripts\modernizr-2.6.2.js.
+2016-11-27T00:33:33.6758344Z   Copying Scripts\respond.js to obj\Release\Package\PackageTmp\Scripts\respond.js.
+2016-11-27T00:33:33.6768350Z   Copying Scripts\respond.min.js to obj\Release\Package\PackageTmp\Scripts\respond.min.js.
+2016-11-27T00:33:33.6768350Z   Copying Scripts\Search\searchScript.js to obj\Release\Package\PackageTmp\Scripts\Search\searchScript.js.
+2016-11-27T00:33:33.6778347Z   Copying Areas\HelpPage\Views\_ViewStart.cshtml to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\_ViewStart.cshtml.
+2016-11-27T00:33:33.6788348Z   Copying Content\Site.css to obj\Release\Package\PackageTmp\Content\Site.css.
+2016-11-27T00:33:33.6788348Z   Copying Scripts\_references.js to obj\Release\Package\PackageTmp\Scripts\_references.js.
+2016-11-27T00:33:33.6798351Z   Copying Views\_ViewStart.cshtml to obj\Release\Package\PackageTmp\Views\_ViewStart.cshtml.
+2016-11-27T00:33:33.6808349Z   Copying Views\Home\Index.cshtml to obj\Release\Package\PackageTmp\Views\Home\Index.cshtml.
+2016-11-27T00:33:33.6808349Z   Copying Views\Shared\Error.cshtml to obj\Release\Package\PackageTmp\Views\Shared\Error.cshtml.
+2016-11-27T00:33:33.6818351Z   Copying Views\Shared\_Layout.cshtml to obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml.
+2016-11-27T00:33:33.6828358Z   Copying Views\Search\Index.cshtml to obj\Release\Package\PackageTmp\Views\Search\Index.cshtml.
+2016-11-27T00:33:33.6828358Z   Copying fonts\glyphicons-halflings-regular.woff to obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff.
+2016-11-27T00:33:33.6838351Z   Copying fonts\glyphicons-halflings-regular.ttf to obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf.
+2016-11-27T00:33:33.6848367Z   Copying fonts\glyphicons-halflings-regular.eot to obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot.
+2016-11-27T00:33:33.6848367Z   Copying packages.config to obj\Release\Package\PackageTmp\packages.config.
+2016-11-27T00:33:33.6858350Z   Copying Scripts\jquery-1.10.2.min.map to obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.min.map.
+2016-11-27T00:33:33.6868349Z   Copying C:\a\1\s\FutureTbd\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll to obj\Release\Package\PackageTmp\bin\Antlr3.Runtime.dll.
+2016-11-27T00:33:33.6868349Z   Copying C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll to obj\Release\Package\PackageTmp\bin\EntityFramework.dll.
+2016-11-27T00:33:33.6918346Z   Copying C:\a\1\s\FutureTbd\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll to obj\Release\Package\PackageTmp\bin\EntityFramework.SqlServer.dll.
+2016-11-27T00:33:33.6928345Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.Core.dll.
+2016-11-27T00:33:33.6938347Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.EntityFramework.dll.
+2016-11-27T00:33:33.6938347Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.Owin.dll.
+2016-11-27T00:33:33.6948349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll to obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll.
+2016-11-27T00:33:33.6948349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.dll.
+2016-11-27T00:33:33.6958349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Host.SystemWeb.dll.
+2016-11-27T00:33:33.6968349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Cookies.dll.
+2016-11-27T00:33:33.6978343Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.dll.
+2016-11-27T00:33:33.6978343Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Facebook.dll.
+2016-11-27T00:33:33.6988336Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Google.dll.
+2016-11-27T00:33:33.6988336Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll.
+2016-11-27T00:33:33.6998347Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.OAuth.dll.
+2016-11-27T00:33:33.7008352Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Twitter.dll.
+2016-11-27T00:33:33.7018346Z   Copying C:\a\1\s\FutureTbd\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Practices.ServiceLocation.dll.
+2016-11-27T00:33:33.7018346Z   Copying C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Configuration.dll.
+2016-11-27T00:33:33.7028348Z   Copying C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.dll.
+2016-11-27T00:33:33.7038353Z   Copying C:\a\1\s\FutureTbd\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Mvc.dll.
+2016-11-27T00:33:33.7038353Z   Copying C:\a\1\s\FutureTbd\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll.
+2016-11-27T00:33:33.7048351Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Web.Infrastructure.dll.
+2016-11-27T00:33:33.7058348Z   Copying C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll to obj\Release\Package\PackageTmp\bin\Newtonsoft.Json.dll.
+2016-11-27T00:33:33.7068348Z   Copying C:\a\1\s\FutureTbd\packages\Owin.1.0\lib\net40\Owin.dll to obj\Release\Package\PackageTmp\bin\Owin.dll.
+2016-11-27T00:33:33.7068348Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll to obj\Release\Package\PackageTmp\bin\System.Net.Http.Formatting.dll.
+2016-11-27T00:33:33.7078350Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll to obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll.
+2016-11-27T00:33:33.7088347Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.dll.
+2016-11-27T00:33:33.7098348Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.Owin.dll.
+2016-11-27T00:33:33.7108350Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.WebHost.dll.
+2016-11-27T00:33:33.7118339Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll to obj\Release\Package\PackageTmp\bin\System.Web.Mvc.dll.
+2016-11-27T00:33:33.7128334Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll to obj\Release\Package\PackageTmp\bin\System.Web.Optimization.dll.
+2016-11-27T00:33:33.7128334Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll to obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll.
+2016-11-27T00:33:33.7138347Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Deployment.dll.
+2016-11-27T00:33:33.7148342Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.dll.
+2016-11-27T00:33:33.7158344Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Razor.dll.
+2016-11-27T00:33:33.7168346Z   Copying C:\a\1\s\FutureTbd\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll to obj\Release\Package\PackageTmp\bin\WebActivatorEx.dll.
+2016-11-27T00:33:33.7168346Z   Copying C:\a\1\s\FutureTbd\packages\WebGrease.1.5.2\lib\WebGrease.dll to obj\Release\Package\PackageTmp\bin\WebGrease.dll.
+2016-11-27T00:33:33.7188341Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\csc.exe to obj\Release\Package\PackageTmp\bin\roslyn\csc.exe.
+2016-11-27T00:33:33.7928355Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll.
+2016-11-27T00:33:33.7928355Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.CSharp.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll.
+2016-11-27T00:33:33.7968341Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll.
+2016-11-27T00:33:33.7988342Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll.
+2016-11-27T00:33:33.8028344Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CSharp.Core.targets to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets.
+2016-11-27T00:33:33.8038349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.VisualBasic.Core.targets to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets.
+2016-11-27T00:33:33.8038349Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Collections.Immutable.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll.
+2016-11-27T00:33:33.8418345Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Reflection.Metadata.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll.
+2016-11-27T00:33:33.8428355Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\vbc.exe to obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe.
+2016-11-27T00:33:33.8438363Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe to obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.
+2016-11-27T00:33:33.8438363Z   Copying C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe.config to obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config.
+2016-11-27T00:33:33.8458341Z   Copying obj\Release\CSAutoParameterize\transformed\Areas\HelpPage\Views\Web.config to obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Web.config.
+2016-11-27T00:33:33.8468346Z   Copying obj\Release\CSAutoParameterize\transformed\Views\Web.config to obj\Release\Package\PackageTmp\Views\Web.config.
+2016-11-27T00:33:33.8478349Z   Copying obj\Release\CSAutoParameterize\transformed\Web.config to obj\Release\Package\PackageTmp\Web.config.
+2016-11-27T00:33:33.8588346Z PipelineCopyAllFilesToOneFolderForMsdeploy:
+2016-11-27T00:33:33.8588346Z   Publish Pipeline Deploy phase Stage PipelineCopyAllFilesToOneFolderForMsdeploy
+2016-11-27T00:33:33.8588346Z Package:
+2016-11-27T00:33:33.8588346Z   Invoking Web Deploy to generate the package with the following settings:
+2016-11-27T00:33:33.8598363Z   $(LocalIisVersion) is 8
+2016-11-27T00:33:33.8598363Z   $(DestinationIisVersion) is 8
+2016-11-27T00:33:33.8598363Z   $(UseIis) is True
+2016-11-27T00:33:33.8598363Z   $(IisUrl) is http://localhost:63320/
+2016-11-27T00:33:33.8598363Z   $(IncludeIisSettings) is False
+2016-11-27T00:33:33.8608348Z   $(_DeploymentUseIis) is False
+2016-11-27T00:33:33.8608348Z   $(DestinationUseIis) is False
+2016-11-27T00:33:33.8678414Z GetMSDeployInstalledVersionPath:
+2016-11-27T00:33:33.8678414Z   $(_DefaultMSDeployMaxVersion) is 3
+2016-11-27T00:33:33.8688359Z   $(_MSDeployVersionsToTry) is 9.0
+2016-11-27T00:33:33.8688359Z   $(MSDeployPath) is C:\Program Files (x86)\IIS\Microsoft Web Deploy V3\
+2016-11-27T00:33:33.8688359Z GenerateMsdeployManifestFiles:
+2016-11-27T00:33:33.8688359Z   Generate source manifest file for Web Deploy package/publish ...
+2016-11-27T00:33:33.9698351Z PackageUsingManifest:
+2016-11-27T00:33:33.9698351Z   Packaging into C:\a\1\a\FutureTbd.zip.
+2016-11-27T00:33:33.9868351Z   Starting Web deployment task from source: manifest(C:\a\1\a\FutureTbd.SourceManifest.xml) to Destination: package(C:\a\1\a\FutureTbd.zip).
+2016-11-27T00:33:35.5031063Z   Adding sitemanifest (sitemanifest).
+2016-11-27T00:33:35.5581073Z   Adding IIS Application (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp)
+2016-11-27T00:33:35.5761073Z   Creating application (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp)
+2016-11-27T00:33:35.5791057Z   Adding virtual path (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp)
+2016-11-27T00:33:35.5871058Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp).
+2016-11-27T00:33:35.6041056Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas).
+2016-11-27T00:33:35.6041056Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage).
+2016-11-27T00:33:35.6081055Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\HelpPage.css).
+2016-11-27T00:33:35.6181073Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views).
+2016-11-27T00:33:35.6191066Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help).
+2016-11-27T00:33:35.6191066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\Api.cshtml).
+2016-11-27T00:33:35.6201083Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates).
+2016-11-27T00:33:35.6201083Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml).
+2016-11-27T00:33:35.6211066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml).
+2016-11-27T00:33:35.6211066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml).
+2016-11-27T00:33:35.6221074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml).
+2016-11-27T00:33:35.6221074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml).
+2016-11-27T00:33:35.6231074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml).
+2016-11-27T00:33:35.6231074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml).
+2016-11-27T00:33:35.6241073Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml).
+2016-11-27T00:33:35.6241073Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml).
+2016-11-27T00:33:35.6251072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml).
+2016-11-27T00:33:35.6261071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml).
+2016-11-27T00:33:35.6261071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml).
+2016-11-27T00:33:35.6271072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml).
+2016-11-27T00:33:35.6271072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml).
+2016-11-27T00:33:35.6291074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\Index.cshtml).
+2016-11-27T00:33:35.6291074Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Help\ResourceModel.cshtml).
+2016-11-27T00:33:35.6301067Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Shared).
+2016-11-27T00:33:35.6311060Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Shared\_Layout.cshtml).
+2016-11-27T00:33:35.6311060Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\Web.config).
+2016-11-27T00:33:35.6321066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Areas\HelpPage\Views\_ViewStart.cshtml).
+2016-11-27T00:33:35.6321066Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin).
+2016-11-27T00:33:35.6331071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Antlr3.Runtime.dll).
+2016-11-27T00:33:35.6461057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\EntityFramework.dll).
+2016-11-27T00:33:36.2181057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\EntityFramework.SqlServer.dll).
+2016-11-27T00:33:36.2671072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\FutureTbd.dll).
+2016-11-27T00:33:36.2771059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.Core.dll).
+2016-11-27T00:33:36.2971063Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.EntityFramework.dll).
+2016-11-27T00:33:36.3051068Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.AspNet.Identity.Owin.dll).
+2016-11-27T00:33:36.3101051Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll).
+2016-11-27T00:33:36.3131059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.dll).
+2016-11-27T00:33:36.3241058Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Host.SystemWeb.dll).
+2016-11-27T00:33:36.3391062Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Cookies.dll).
+2016-11-27T00:33:36.3421058Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.dll).
+2016-11-27T00:33:36.3561066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Facebook.dll).
+2016-11-27T00:33:36.3591058Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Google.dll).
+2016-11-27T00:33:36.3651058Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll).
+2016-11-27T00:33:36.3681057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.OAuth.dll).
+2016-11-27T00:33:36.3761059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Owin.Security.Twitter.dll).
+2016-11-27T00:33:36.3811045Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Practices.ServiceLocation.dll).
+2016-11-27T00:33:36.3821064Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Configuration.dll).
+2016-11-27T00:33:36.3911057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.dll).
+2016-11-27T00:33:36.4071133Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.Mvc.dll).
+2016-11-27T00:33:36.4081134Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll).
+2016-11-27T00:33:36.4101134Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Microsoft.Web.Infrastructure.dll).
+2016-11-27T00:33:36.4151044Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Newtonsoft.Json.dll).
+2016-11-27T00:33:36.4791066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\Owin.dll).
+2016-11-27T00:33:36.4801076Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn).
+2016-11-27T00:33:36.4801076Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\csc.exe).
+2016-11-27T00:33:36.4841065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll).
+2016-11-27T00:33:36.4931065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll).
+2016-11-27T00:33:36.9461068Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll).
+2016-11-27T00:33:37.1511057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll).
+2016-11-27T00:33:37.6891066Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets).
+2016-11-27T00:33:37.6901065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets).
+2016-11-27T00:33:37.6911075Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll).
+2016-11-27T00:33:37.7131065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll).
+2016-11-27T00:33:37.7431065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe).
+2016-11-27T00:33:37.7471065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe).
+2016-11-27T00:33:37.7541062Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config).
+2016-11-27T00:33:37.7541062Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Net.Http.Formatting.dll).
+2016-11-27T00:33:37.7751081Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll).
+2016-11-27T00:33:37.7901064Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Http.dll).
+2016-11-27T00:33:37.8531086Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Http.Owin.dll).
+2016-11-27T00:33:37.8591054Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Http.WebHost.dll).
+2016-11-27T00:33:37.8681051Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Mvc.dll).
+2016-11-27T00:33:37.9431071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Optimization.dll).
+2016-11-27T00:33:37.9511070Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll).
+2016-11-27T00:33:37.9841061Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Deployment.dll).
+2016-11-27T00:33:37.9881057Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.WebPages.dll).
+2016-11-27T00:33:38.0131056Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Razor.dll).
+2016-11-27T00:33:38.0171055Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\WebActivatorEx.dll).
+2016-11-27T00:33:38.0181064Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\bin\WebGrease.dll).
+2016-11-27T00:33:38.1761070Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Content).
+2016-11-27T00:33:38.1761070Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Content\bootstrap.css).
+2016-11-27T00:33:38.1831064Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Content\bootstrap.min.css).
+2016-11-27T00:33:38.1881062Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Content\logo_text.png).
+2016-11-27T00:33:38.1881062Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Content\Site.css).
+2016-11-27T00:33:38.1891068Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\favicon.ico).
+2016-11-27T00:33:38.1891068Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\fonts).
+2016-11-27T00:33:38.1901071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot).
+2016-11-27T00:33:38.1911069Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.svg).
+2016-11-27T00:33:38.1921063Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf).
+2016-11-27T00:33:38.1951064Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff).
+2016-11-27T00:33:38.1961067Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Global.asax).
+2016-11-27T00:33:38.1961067Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\packages.config).
+2016-11-27T00:33:38.1971065Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts).
+2016-11-27T00:33:38.1971065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\bootstrap.js).
+2016-11-27T00:33:38.2011051Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\bootstrap.min.js).
+2016-11-27T00:33:38.2031052Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.js).
+2016-11-27T00:33:38.2331053Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.min.js).
+2016-11-27T00:33:38.2421072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.min.map).
+2016-11-27T00:33:38.2671050Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery.validate.js).
+2016-11-27T00:33:38.2711058Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery.validate.min.js).
+2016-11-27T00:33:38.2721059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.js).
+2016-11-27T00:33:38.2741061Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\jquery.validate.unobtrusive.min.js).
+2016-11-27T00:33:38.2751065Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\knockout-3.4.0.debug.js).
+2016-11-27T00:33:38.3001094Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\knockout-3.4.0.js).
+2016-11-27T00:33:38.3051056Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\modernizr-2.6.2.js).
+2016-11-27T00:33:38.3101068Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\respond.js).
+2016-11-27T00:33:38.3111151Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\respond.min.js).
+2016-11-27T00:33:38.3121071Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\Search).
+2016-11-27T00:33:38.3121071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\Search\searchScript.js).
+2016-11-27T00:33:38.3121071Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Scripts\_references.js).
+2016-11-27T00:33:38.3131070Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views).
+2016-11-27T00:33:38.3131070Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Home).
+2016-11-27T00:33:38.3141073Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Home\Index.cshtml).
+2016-11-27T00:33:38.3141073Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Search).
+2016-11-27T00:33:38.3151072Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Search\Index.cshtml).
+2016-11-27T00:33:38.3151072Z   Adding directory (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Shared).
+2016-11-27T00:33:38.3191056Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Shared\Error.cshtml).
+2016-11-27T00:33:38.3191056Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml).
+2016-11-27T00:33:38.3201068Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\Web.config).
+2016-11-27T00:33:38.3211059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Views\_ViewStart.cshtml).
+2016-11-27T00:33:38.3211059Z   Adding file (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp\Web.config).
+2016-11-27T00:33:38.3221061Z   Adding ACL's for path (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp)
+2016-11-27T00:33:38.3231059Z   Adding ACL's for path (C:\a\1\s\FutureTbd\FutureTbd\obj\Release\Package\PackageTmp)
+2016-11-27T00:33:38.3341056Z   Adding declared parameter 'IIS Web Application Name'.
+2016-11-27T00:33:38.3361058Z   Adding declared parameter 'DefaultConnection-Web.config Connection String'.
+2016-11-27T00:33:38.4231076Z   Successfully executed Web deployment task.
+2016-11-27T00:33:38.4321077Z   Package "FutureTbd.zip" is successfully created as single file at the following location:
+2016-11-27T00:33:38.4321077Z   file:///C:/a/1/a
+2016-11-27T00:33:38.4321077Z   To get the instructions on how to deploy the web package please visit the following link:
+2016-11-27T00:33:38.4321077Z   http://go.microsoft.com/fwlink/?LinkId=124618
+2016-11-27T00:33:38.4571065Z GenerateSampleDeployScript:
+2016-11-27T00:33:38.4571065Z   Sample script for deploying this package is generated at the following location:
+2016-11-27T00:33:38.4571065Z   C:\a\1\a\FutureTbd.deploy.cmd
+2016-11-27T00:33:38.4571065Z   For this sample script, you can change the deploy parameters by changing the following file: 
+2016-11-27T00:33:38.4581076Z   C:\a\1\a\FutureTbd.SetParameters.xml
+2016-11-27T00:33:38.4581076Z PipelineDeployPhase:
+2016-11-27T00:33:38.4581076Z   Publish Pipeline Deploy Phase
+2016-11-27T00:33:38.4781054Z Done Building Project "C:\a\1\s\FutureTbd\FutureTbd\FutureTbd.csproj" (default targets).
+2016-11-27T00:33:38.4921056Z The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:38.4921056Z The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:38.4921056Z The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:38.4921056Z The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:38.4941058Z Project "C:\a\1\s\FutureTbd\FutureTbd.sln" (1) is building "C:\a\1\s\FutureTbd\FutureTbd.Tests\FutureTbd.Tests.csproj" (3) on node 1 (default targets).
+2016-11-27T00:33:38.4941058Z PrepareForBuild:
+2016-11-27T00:33:38.4941058Z   Creating directory "bin\Release\".
+2016-11-27T00:33:38.4951062Z   Creating directory "obj\Release\".
+2016-11-27T00:33:38.6813662Z GenerateTargetFrameworkMonikerAttribute:
+2016-11-27T00:33:38.6813662Z Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+2016-11-27T00:33:38.6981069Z CoreCompile:
+2016-11-27T00:33:38.7011060Z   C:\Program Files (x86)\MSBuild\14.0\bin\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll /reference:C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll /reference:C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" /reference:C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll /reference:C:\a\1\s\FutureTbd\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.WebRequest.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Abstractions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.ApplicationServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Extensions.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Routing.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.Annotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.EventBasedAsync.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tracing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.NetworkInformation.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Requests.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.WebHeaderCollection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.ILGeneration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.Lightweight.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Json.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Security.Principal.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Duplex.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.NetTcp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.RegularExpressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Timer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XmlSerializer.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\FutureTbd.Tests.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output Controllers\SearchControllerTests.cs Properties\AssemblyInfo.cs Controllers\HomeControllerTest.cs "C:\Users\buildguest\AppData\Local\Temp\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs"
+2016-11-27T00:33:38.7061133Z   Using shared compilation with compiler from directory: C:\Program Files (x86)\MSBuild\14.0\Bin
+2016-11-27T00:33:40.2944488Z _CopyFilesMarkedCopyLocal:
+2016-11-27T00:33:40.2944488Z   Copying file from "C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll" to "bin\Release\Castle.Core.dll".
+2016-11-27T00:33:40.2944488Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.dll" to "bin\Release\FutureTbd.dll".
+2016-11-27T00:33:40.2954496Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" to "bin\Release\Microsoft.Web.Infrastructure.dll".
+2016-11-27T00:33:40.2964486Z   Copying file from "C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.dll" to "bin\Release\Moq.dll".
+2016-11-27T00:33:40.2964486Z   Copying file from "C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" to "bin\Release\Newtonsoft.Json.dll".
+2016-11-27T00:33:40.2974493Z   Copying file from "C:\a\1\s\FutureTbd\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll" to "bin\Release\nunit.framework.dll".
+2016-11-27T00:33:40.2984490Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" to "bin\Release\System.Net.Http.Formatting.dll".
+2016-11-27T00:33:40.2984490Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" to "bin\Release\System.Web.Helpers.dll".
+2016-11-27T00:33:40.2994491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll" to "bin\Release\System.Web.Http.dll".
+2016-11-27T00:33:40.3004493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" to "bin\Release\System.Web.Http.WebHost.dll".
+2016-11-27T00:33:40.3004493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" to "bin\Release\System.Web.Mvc.dll".
+2016-11-27T00:33:40.3014492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" to "bin\Release\System.Web.Razor.dll".
+2016-11-27T00:33:40.3024489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" to "bin\Release\System.Web.WebPages.Deployment.dll".
+2016-11-27T00:33:40.3024489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" to "bin\Release\System.Web.WebPages.dll".
+2016-11-27T00:33:40.3034492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" to "bin\Release\System.Web.WebPages.Razor.dll".
+2016-11-27T00:33:40.3034492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\WebActivatorEx.dll" to "bin\Release\WebActivatorEx.dll".
+2016-11-27T00:33:40.3044491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.dll" to "bin\Release\Microsoft.Owin.dll".
+2016-11-27T00:33:40.3044491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Optimization.dll" to "bin\Release\System.Web.Optimization.dll".
+2016-11-27T00:33:40.3054489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Core.dll" to "bin\Release\Microsoft.AspNet.Identity.Core.dll".
+2016-11-27T00:33:40.3064497Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Owin.dll" to "bin\Release\Microsoft.AspNet.Identity.Owin.dll".
+2016-11-27T00:33:40.3064497Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.dll" to "bin\Release\Microsoft.Owin.Security.dll".
+2016-11-27T00:33:40.3064497Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.OAuth.dll" to "bin\Release\Microsoft.Owin.Security.OAuth.dll".
+2016-11-27T00:33:40.3074492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Owin.dll" to "bin\Release\Owin.dll".
+2016-11-27T00:33:40.3084496Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.EntityFramework.dll" to "bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll".
+2016-11-27T00:33:40.3084496Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.Owin.dll" to "bin\Release\System.Web.Http.Owin.dll".
+2016-11-27T00:33:40.3084496Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.dll" to "bin\Release\Microsoft.Practices.Unity.dll".
+2016-11-27T00:33:40.3095781Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\EntityFramework.dll" to "bin\Release\EntityFramework.dll".
+2016-11-27T00:33:40.3134481Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.Cookies.dll" to "bin\Release\Microsoft.Owin.Security.Cookies.dll".
+2016-11-27T00:33:40.3144483Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.Mvc.dll" to "bin\Release\Microsoft.Practices.Unity.Mvc.dll".
+2016-11-27T00:33:40.3154495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.dll" to "bin\Release\Microsoft.Practices.ServiceLocation.dll".
+2016-11-27T00:33:40.3154495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.pdb" to "bin\Release\FutureTbd.pdb".
+2016-11-27T00:33:40.3164486Z   Copying file from "C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.xml" to "bin\Release\Castle.Core.xml".
+2016-11-27T00:33:40.3164486Z   Copying file from "C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.xml" to "bin\Release\Moq.xml".
+2016-11-27T00:33:40.3174494Z   Copying file from "C:\a\1\s\FutureTbd\packages\NUnit.3.5.0\lib\net45\nunit.framework.xml" to "bin\Release\nunit.framework.xml".
+2016-11-27T00:33:40.3184496Z   Copying file from "C:\a\1\s\FutureTbd\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.xml" to "bin\Release\Newtonsoft.Json.xml".
+2016-11-27T00:33:40.3194485Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.xml" to "bin\Release\System.Net.Http.Formatting.xml".
+2016-11-27T00:33:40.3194485Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" to "bin\Release\System.Web.Helpers.xml".
+2016-11-27T00:33:40.3204489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.xml" to "bin\Release\System.Web.Http.xml".
+2016-11-27T00:33:40.3214484Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.xml" to "bin\Release\System.Web.Http.WebHost.xml".
+2016-11-27T00:33:40.3214484Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" to "bin\Release\System.Web.Mvc.xml".
+2016-11-27T00:33:40.3224492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" to "bin\Release\System.Web.Razor.xml".
+2016-11-27T00:33:40.3234495Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" to "bin\Release\System.Web.WebPages.xml".
+2016-11-27T00:33:40.3244490Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" to "bin\Release\System.Web.WebPages.Deployment.xml".
+2016-11-27T00:33:40.3244490Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" to "bin\Release\System.Web.WebPages.Razor.xml".
+2016-11-27T00:33:40.3254492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.xml" to "bin\Release\Microsoft.Owin.xml".
+2016-11-27T00:33:40.3264495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Optimization.xml" to "bin\Release\System.Web.Optimization.xml".
+2016-11-27T00:33:40.3264495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Core.xml" to "bin\Release\Microsoft.AspNet.Identity.Core.xml".
+2016-11-27T00:33:40.3274497Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Owin.xml" to "bin\Release\Microsoft.AspNet.Identity.Owin.xml".
+2016-11-27T00:33:40.3284492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.xml" to "bin\Release\Microsoft.Owin.Security.xml".
+2016-11-27T00:33:40.3284492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.OAuth.xml" to "bin\Release\Microsoft.Owin.Security.OAuth.xml".
+2016-11-27T00:33:40.3294495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.EntityFramework.xml" to "bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml".
+2016-11-27T00:33:40.3304499Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.Owin.xml" to "bin\Release\System.Web.Http.Owin.xml".
+2016-11-27T00:33:40.3304499Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.xml" to "bin\Release\Microsoft.Practices.Unity.xml".
+2016-11-27T00:33:40.3314492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\EntityFramework.xml" to "bin\Release\EntityFramework.xml".
+2016-11-27T00:33:40.3344485Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.Cookies.xml" to "bin\Release\Microsoft.Owin.Security.Cookies.xml".
+2016-11-27T00:33:40.3354491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.Mvc.xml" to "bin\Release\Microsoft.Practices.Unity.Mvc.xml".
+2016-11-27T00:33:40.3354491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.pdb" to "bin\Release\Microsoft.Practices.ServiceLocation.pdb".
+2016-11-27T00:33:40.3364489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.xml" to "bin\Release\Microsoft.Practices.ServiceLocation.xml".
+2016-11-27T00:33:40.3414497Z _CopyOutOfDateSourceItemsToOutputDirectory:
+2016-11-27T00:33:40.3424497Z   Creating directory "bin\Release\roslyn".
+2016-11-27T00:33:40.3424497Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\csc.exe" to "bin\Release\roslyn\csc.exe".
+2016-11-27T00:33:40.3424497Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll".
+2016-11-27T00:33:40.3434496Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.CSharp.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.CSharp.dll".
+2016-11-27T00:33:40.3464478Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.dll".
+2016-11-27T00:33:40.3484489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll".
+2016-11-27T00:33:40.3524483Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CSharp.Core.targets" to "bin\Release\roslyn\Microsoft.CSharp.Core.targets".
+2016-11-27T00:33:40.3534492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.VisualBasic.Core.targets" to "bin\Release\roslyn\Microsoft.VisualBasic.Core.targets".
+2016-11-27T00:33:40.3534492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Collections.Immutable.dll" to "bin\Release\roslyn\System.Collections.Immutable.dll".
+2016-11-27T00:33:40.3544492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Reflection.Metadata.dll" to "bin\Release\roslyn\System.Reflection.Metadata.dll".
+2016-11-27T00:33:40.3554493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\vbc.exe" to "bin\Release\roslyn\vbc.exe".
+2016-11-27T00:33:40.3554493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe" to "bin\Release\roslyn\VBCSCompiler.exe".
+2016-11-27T00:33:40.3554493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe.config" to "bin\Release\roslyn\VBCSCompiler.exe.config".
+2016-11-27T00:33:40.3574487Z _CopyAppConfigFile:
+2016-11-27T00:33:40.3574487Z   Copying file from "App.config" to "bin\Release\FutureTbd.Tests.dll.config".
+2016-11-27T00:33:40.3584491Z CopyFilesToOutputDirectory:
+2016-11-27T00:33:40.3584491Z   Copying file from "obj\Release\FutureTbd.Tests.dll" to "bin\Release\FutureTbd.Tests.dll".
+2016-11-27T00:33:40.3584491Z   FutureTbd.Tests -> C:\a\1\s\FutureTbd\FutureTbd.Tests\bin\Release\FutureTbd.Tests.dll
+2016-11-27T00:33:40.3594495Z   Copying file from "obj\Release\FutureTbd.Tests.pdb" to "bin\Release\FutureTbd.Tests.pdb".
+2016-11-27T00:33:40.3654493Z Done Building Project "C:\a\1\s\FutureTbd\FutureTbd.Tests\FutureTbd.Tests.csproj" (default targets).
+2016-11-27T00:33:40.3794478Z The target "_ConvertPdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:40.3794478Z The target "_CollectPdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:40.3794478Z The target "_CollectMdbFiles" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:40.3794478Z The target "_CopyMdbFiles" listed in an AfterTargets attribute at "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)" does not exist in the project, and will be ignored.
+2016-11-27T00:33:40.3814480Z Project "C:\a\1\s\FutureTbd\FutureTbd.sln" (1) is building "C:\a\1\s\FutureTbd\FutureTbdAtdd\FutureTbdAtdd.csproj" (4) on node 1 (default targets).
+2016-11-27T00:33:40.3814480Z PrepareForBuild:
+2016-11-27T00:33:40.3814480Z   Creating directory "bin\Release\".
+2016-11-27T00:33:40.3814480Z   Creating directory "obj\Release\".
+2016-11-27T00:33:40.5534493Z GenerateTargetFrameworkMonikerAttribute:
+2016-11-27T00:33:40.5534493Z Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+2016-11-27T00:33:40.5554496Z CoreCompile:
+2016-11-27T00:33:40.5594484Z   C:\Program Files (x86)\MSBuild\14.0\bin\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll /reference:C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.dll /reference:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll /reference:C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" /reference:"C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll" /reference:C:\a\1\s\FutureTbd\packages\NUnit.3.0.0\lib\net45\nunit.framework.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll /reference:C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll /reference:C:\a\1\s\FutureTbd\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll /reference:C:\a\1\s\FutureTbd\packages\SpecRun.NUnit.1.6.0-rc001\lib\net40\TechTalk.SpecRun.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.Annotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.EventBasedAsync.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tracing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.NetworkInformation.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Requests.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.WebHeaderCollection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.ILGeneration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.Lightweight.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Json.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Security.Principal.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Duplex.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.NetTcp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Primitives.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.RegularExpressions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Timer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XmlSerializer.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\FutureTbdAtdd.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output Search.feature.cs SearchSteps.cs Properties\AssemblyInfo.cs "C:\Users\buildguest\AppData\Local\Temp\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs"
+2016-11-27T00:33:40.5604493Z   Using shared compilation with compiler from directory: C:\Program Files (x86)\MSBuild\14.0\Bin
+2016-11-27T00:33:40.6274486Z _CopyFilesMarkedCopyLocal:
+2016-11-27T00:33:40.6274486Z   Copying file from "C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll" to "bin\Release\Castle.Core.dll".
+2016-11-27T00:33:40.6284493Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.dll" to "bin\Release\FutureTbd.dll".
+2016-11-27T00:33:40.6284493Z   Copying file from "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" to "bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll".
+2016-11-27T00:33:40.6294491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" to "bin\Release\Microsoft.Web.Infrastructure.dll".
+2016-11-27T00:33:40.6304493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.dll" to "bin\Release\Moq.dll".
+2016-11-27T00:33:40.6304493Z   Copying file from "C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll" to "bin\Release\Newtonsoft.Json.dll".
+2016-11-27T00:33:40.6414483Z   Copying file from "C:\a\1\s\FutureTbd\packages\NUnit.3.0.0\lib\net45\nunit.framework.dll" to "bin\Release\nunit.framework.dll".
+2016-11-27T00:33:40.6414483Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" to "bin\Release\System.Web.Helpers.dll".
+2016-11-27T00:33:40.6424493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" to "bin\Release\System.Web.Mvc.dll".
+2016-11-27T00:33:40.6434488Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" to "bin\Release\System.Web.Razor.dll".
+2016-11-27T00:33:40.6434488Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" to "bin\Release\System.Web.WebPages.Deployment.dll".
+2016-11-27T00:33:40.6444491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" to "bin\Release\System.Web.WebPages.dll".
+2016-11-27T00:33:40.6444491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" to "bin\Release\System.Web.WebPages.Razor.dll".
+2016-11-27T00:33:40.6454493Z   Copying file from "C:\a\1\s\FutureTbd\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll" to "bin\Release\TechTalk.SpecFlow.dll".
+2016-11-27T00:33:40.6464492Z   Copying file from "C:\a\1\s\FutureTbd\packages\SpecRun.NUnit.1.6.0-rc001\lib\net40\TechTalk.SpecRun.dll" to "bin\Release\TechTalk.SpecRun.dll".
+2016-11-27T00:33:40.6464492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\WebActivatorEx.dll" to "bin\Release\WebActivatorEx.dll".
+2016-11-27T00:33:40.6464492Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.dll" to "bin\Release\Microsoft.Owin.dll".
+2016-11-27T00:33:40.6474487Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Optimization.dll" to "bin\Release\System.Web.Optimization.dll".
+2016-11-27T00:33:40.6484491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Core.dll" to "bin\Release\Microsoft.AspNet.Identity.Core.dll".
+2016-11-27T00:33:40.6484491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Owin.dll" to "bin\Release\Microsoft.AspNet.Identity.Owin.dll".
+2016-11-27T00:33:40.6494491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.dll" to "bin\Release\Microsoft.Owin.Security.dll".
+2016-11-27T00:33:40.6494491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.OAuth.dll" to "bin\Release\Microsoft.Owin.Security.OAuth.dll".
+2016-11-27T00:33:40.6504489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Owin.dll" to "bin\Release\Owin.dll".
+2016-11-27T00:33:40.6504489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.dll" to "bin\Release\System.Web.Http.dll".
+2016-11-27T00:33:40.6514490Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.EntityFramework.dll" to "bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll".
+2016-11-27T00:33:40.6514490Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.Owin.dll" to "bin\Release\System.Web.Http.Owin.dll".
+2016-11-27T00:33:40.6524491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Net.Http.Formatting.dll" to "bin\Release\System.Net.Http.Formatting.dll".
+2016-11-27T00:33:40.6524491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.dll" to "bin\Release\Microsoft.Practices.Unity.dll".
+2016-11-27T00:33:40.6534491Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\EntityFramework.dll" to "bin\Release\EntityFramework.dll".
+2016-11-27T00:33:40.6584481Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.Cookies.dll" to "bin\Release\Microsoft.Owin.Security.Cookies.dll".
+2016-11-27T00:33:40.6584481Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.WebHost.dll" to "bin\Release\System.Web.Http.WebHost.dll".
+2016-11-27T00:33:40.6594496Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.Mvc.dll" to "bin\Release\Microsoft.Practices.Unity.Mvc.dll".
+2016-11-27T00:33:40.6594496Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.dll" to "bin\Release\Microsoft.Practices.ServiceLocation.dll".
+2016-11-27T00:33:40.6604494Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\FutureTbd.pdb" to "bin\Release\FutureTbd.pdb".
+2016-11-27T00:33:40.6614491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.xml" to "bin\Release\Castle.Core.xml".
+2016-11-27T00:33:40.6614491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Moq.4.6.38-alpha\lib\net45\Moq.xml" to "bin\Release\Moq.xml".
+2016-11-27T00:33:40.6624494Z   Copying file from "C:\a\1\s\FutureTbd\packages\NUnit.3.0.0\lib\net45\nunit.framework.xml" to "bin\Release\nunit.framework.xml".
+2016-11-27T00:33:40.6634491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" to "bin\Release\System.Web.Helpers.xml".
+2016-11-27T00:33:40.6634491Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" to "bin\Release\System.Web.Mvc.xml".
+2016-11-27T00:33:40.6644487Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" to "bin\Release\System.Web.Razor.xml".
+2016-11-27T00:33:40.6654494Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" to "bin\Release\System.Web.WebPages.xml".
+2016-11-27T00:33:40.6664492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" to "bin\Release\System.Web.WebPages.Deployment.xml".
+2016-11-27T00:33:40.6674490Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" to "bin\Release\System.Web.WebPages.Razor.xml".
+2016-11-27T00:33:40.6674490Z   Copying file from "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml" to "bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml".
+2016-11-27T00:33:40.6684500Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.xml" to "bin\Release\Microsoft.Owin.xml".
+2016-11-27T00:33:40.6684500Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Optimization.xml" to "bin\Release\System.Web.Optimization.xml".
+2016-11-27T00:33:40.6694495Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Core.xml" to "bin\Release\Microsoft.AspNet.Identity.Core.xml".
+2016-11-27T00:33:40.6704493Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.Owin.xml" to "bin\Release\Microsoft.AspNet.Identity.Owin.xml".
+2016-11-27T00:33:40.6704493Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.xml" to "bin\Release\Microsoft.Owin.Security.xml".
+2016-11-27T00:33:40.6714493Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.OAuth.xml" to "bin\Release\Microsoft.Owin.Security.OAuth.xml".
+2016-11-27T00:33:40.6724498Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.xml" to "bin\Release\System.Web.Http.xml".
+2016-11-27T00:33:40.6724498Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.AspNet.Identity.EntityFramework.xml" to "bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml".
+2016-11-27T00:33:40.6734489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.Owin.xml" to "bin\Release\System.Web.Http.Owin.xml".
+2016-11-27T00:33:40.6734489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Net.Http.Formatting.xml" to "bin\Release\System.Net.Http.Formatting.xml".
+2016-11-27T00:33:40.6744497Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.xml" to "bin\Release\Microsoft.Practices.Unity.xml".
+2016-11-27T00:33:40.6754489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\EntityFramework.xml" to "bin\Release\EntityFramework.xml".
+2016-11-27T00:33:40.6784485Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Owin.Security.Cookies.xml" to "bin\Release\Microsoft.Owin.Security.Cookies.xml".
+2016-11-27T00:33:40.6794489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\System.Web.Http.WebHost.xml" to "bin\Release\System.Web.Http.WebHost.xml".
+2016-11-27T00:33:40.6794489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.Unity.Mvc.xml" to "bin\Release\Microsoft.Practices.Unity.Mvc.xml".
+2016-11-27T00:33:40.6794489Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.pdb" to "bin\Release\Microsoft.Practices.ServiceLocation.pdb".
+2016-11-27T00:33:40.6804490Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbd\bin\Microsoft.Practices.ServiceLocation.xml" to "bin\Release\Microsoft.Practices.ServiceLocation.xml".
+2016-11-27T00:33:40.6864557Z _CopyOutOfDateSourceItemsToOutputDirectory:
+2016-11-27T00:33:40.6864557Z   Creating directory "bin\Release\roslyn".
+2016-11-27T00:33:40.6864557Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\csc.exe" to "bin\Release\roslyn\csc.exe".
+2016-11-27T00:33:40.6874505Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll".
+2016-11-27T00:33:40.6874505Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.CSharp.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.CSharp.dll".
+2016-11-27T00:33:40.6904488Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.dll".
+2016-11-27T00:33:40.6924492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll".
+2016-11-27T00:33:40.6964481Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.CSharp.Core.targets" to "bin\Release\roslyn\Microsoft.CSharp.Core.targets".
+2016-11-27T00:33:40.6974489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\Microsoft.VisualBasic.Core.targets" to "bin\Release\roslyn\Microsoft.VisualBasic.Core.targets".
+2016-11-27T00:33:40.6974489Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Collections.Immutable.dll" to "bin\Release\roslyn\System.Collections.Immutable.dll".
+2016-11-27T00:33:40.6984492Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\System.Reflection.Metadata.dll" to "bin\Release\roslyn\System.Reflection.Metadata.dll".
+2016-11-27T00:33:40.6994493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\vbc.exe" to "bin\Release\roslyn\vbc.exe".
+2016-11-27T00:33:40.6994493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe" to "bin\Release\roslyn\VBCSCompiler.exe".
+2016-11-27T00:33:40.6994493Z   Copying file from "C:\a\1\s\FutureTbd\packages\Microsoft.Net.Compilers.1.0.0\tools\VBCSCompiler.exe.config" to "bin\Release\roslyn\VBCSCompiler.exe.config".
+2016-11-27T00:33:40.7004493Z   Copying file from "C:\a\1\s\FutureTbd\FutureTbdAtdd\Default.srprofile" to "bin\Release\Default.srprofile".
+2016-11-27T00:33:40.7014500Z _CopyAppConfigFile:
+2016-11-27T00:33:40.7014500Z   Copying file from "App.config" to "bin\Release\FutureTbdAtdd.dll.config".
+2016-11-27T00:33:40.7024498Z CopyFilesToOutputDirectory:
+2016-11-27T00:33:40.7024498Z   Copying file from "obj\Release\FutureTbdAtdd.dll" to "bin\Release\FutureTbdAtdd.dll".
+2016-11-27T00:33:40.7034493Z   FutureTbdAtdd -> C:\a\1\s\FutureTbd\FutureTbdAtdd\bin\Release\FutureTbdAtdd.dll
+2016-11-27T00:33:40.7034493Z   Copying file from "obj\Release\FutureTbdAtdd.pdb" to "bin\Release\FutureTbdAtdd.pdb".
+2016-11-27T00:33:40.7104491Z Done Building Project "C:\a\1\s\FutureTbd\FutureTbdAtdd\FutureTbdAtdd.csproj" (default targets).
+2016-11-27T00:33:40.7114495Z Done Building Project "C:\a\1\s\FutureTbd\FutureTbd.sln" (default targets).
+2016-11-27T00:33:40.7144479Z 
+2016-11-27T00:33:40.7144479Z Build succeeded.
+2016-11-27T00:33:40.7144479Z     0 Warning(s)
+2016-11-27T00:33:40.7144479Z     0 Error(s)
+2016-11-27T00:33:40.7144479Z 
+2016-11-27T00:33:40.7144479Z Time Elapsed 00:00:17.13
+2016-11-27T00:33:40.7574490Z ##[section]Finishing: Build solution **\*.sln
+2016-11-27T00:33:40.7574490Z ##[section]Starting: Test Assemblies **\*test*.dll;-:**\obj\**
+2016-11-27T00:33:40.7674498Z ==============================================================================
+2016-11-27T00:33:40.7674498Z Task         : Visual Studio Test
+2016-11-27T00:33:40.7674498Z Description  : Run tests with Visual Studio test runner
+2016-11-27T00:33:40.7674498Z Version      : 1.0.77
+2016-11-27T00:33:40.7674498Z Author       : Microsoft Corporation
+2016-11-27T00:33:40.7674498Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=624539)
+2016-11-27T00:33:40.7674498Z ==============================================================================
+2016-11-27T00:33:40.7804492Z Preparing task execution handler.
+2016-11-27T00:33:45.2554573Z Executing the powershell script: C:\a\_tasks\VSTest_ef087383-ee5e-42c7-9a53-ab56c98420f9\1.0.77\VSTest.ps1
+2016-11-27T00:33:46.0944566Z Working folder: C:\a\1\s
+2016-11-27T00:33:46.0944566Z Executing C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe "C:\a\1\s\FutureTbd\FutureTbd.Tests\bin\Release\FutureTbd.Tests.dll" "C:\a\1\s\FutureTbd\FutureTbdAtdd\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" "C:\a\1\s\FutureTbd\packages\NUnit3TestAdapter.3.6.0\tools\NUnit3.TestAdapter.dll" "C:\a\1\s\FutureTbd\packages\SpecRun.Runner.1.6.0-rc001\tools\TechTalk.SpecRun.VisualStudio.TestAdapter.dll"  /EnableCodeCoverage /logger:trx /TestAdapterPath:"C:\a\1\s\FutureTbd\packages"
+2016-11-27T00:33:46.4524563Z Microsoft (R) Test Execution Command Line Tool Version 14.0.25420.1
+2016-11-27T00:33:46.4534564Z Copyright (c) Microsoft Corporation.  All rights reserved.
+2016-11-27T00:33:46.4534564Z 
+2016-11-27T00:33:46.6794570Z Starting test execution, please wait...
+2016-11-27T00:33:46.7884572Z Warning: Using Isolation mode to run the tests as diagnostic data adapters were enabled in the runsettings. Use the /inIsolation parameter to suppress this warning.
+2016-11-27T00:34:00.3798653Z Information: NUnit Adapter 3.6.0.0: Test execution started
+2016-11-27T00:34:00.3798653Z 
+2016-11-27T00:34:00.4058634Z Information: Running all tests in C:\a\1\s\FutureTbd\FutureTbd.Tests\bin\Release\FutureTbd.Tests.dll
+2016-11-27T00:34:00.4058634Z 
+2016-11-27T00:34:02.3511096Z Information: NUnit3TestExecutor converted 20 of 20 NUnit test cases
+2016-11-27T00:34:02.3511096Z 
+2016-11-27T00:34:04.1551098Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenIndexPageTitleIsSetCorrectly
+2016-11-27T00:34:04.1551098Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenIndexViewIsReturned
+2016-11-27T00:34:04.1551098Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenResultIsNotNull
+2016-11-27T00:34:04.1561100Z Passed   GivenCallToSearch_WhenSearchingText_ThenSearchEndpointIsCalled
+2016-11-27T00:34:04.1561100Z Passed   GivenCallToSearch_WhenSearchingText_ThenSearchEndpointIsCalledWithCorrectParameter
+2016-11-27T00:34:04.1561100Z Passed   GivenEmptyStringSearchText_WhenSearching_ThenSearchResultErrorIsSetCorrectly
+2016-11-27T00:34:04.1561100Z Passed   GivenGreaterMaximumSearchCharacters_WhenSearching_ThensearchResultErrorIsSetCorrectly
+2016-11-27T00:34:04.1561100Z Passed   GivenGreaterThanAllowedMaximumSearchCharacters_WhenSearching_ThensearchResultErrorIsSetCorrectly
+2016-11-27T00:34:04.1561100Z Passed   GivenGreaterThanAllowedMaximumSearchCharacters_WhenSearching_ThensearchResultMaximumCharMessageIsSetCorrectly
+2016-11-27T00:34:04.1561100Z Passed   GivenLessThanMininumSearchCharacters_WhenSearching_ThenSearchResultErrorIsSetCorrectly
+2016-11-27T00:34:04.1561100Z Passed   GivenLessThanMininumSearchCharacters_WhenSearching_ThenSearchResultMinimumCharMessageIsSetCorrectly
+2016-11-27T00:34:04.1571096Z Passed   GivenNullEndpoint_WhenCreatingController_ThenErrorOccurs
+2016-11-27T00:34:04.1571096Z Passed   GivenNullSearchText_WhenSearching_ThenJsonIsReturned
+2016-11-27T00:34:04.1571096Z Passed   GivenNullSearchText_WhenSearching_ThenSearchResultErrorIsSetCorrectly
+2016-11-27T00:34:04.1571096Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenIndexPageTitleIsSetCorrectly
+2016-11-27T00:34:04.1571096Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenIndexViewIsReturned
+2016-11-27T00:34:04.1571096Z Passed   GivenRequestToIndex_WhenCallingIndex_ThenResultIsNotNull
+2016-11-27T00:34:04.1571096Z Passed   GivenRequestToSearch_WhenCallingIndex_ThenResultIsNotNull
+2016-11-27T00:34:04.1571096Z Information: Running all tests in C:\a\1\s\FutureTbd\FutureTbdAtdd\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: NUnit failed to load C:\a\1\s\FutureTbd\FutureTbdAtdd\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: Running all tests in C:\a\1\s\FutureTbd\packages\NUnit3TestAdapter.3.6.0\tools\NUnit3.TestAdapter.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: NUnit failed to load C:\a\1\s\FutureTbd\packages\NUnit3TestAdapter.3.6.0\tools\NUnit3.TestAdapter.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: Running all tests in C:\a\1\s\FutureTbd\packages\SpecRun.Runner.1.6.0-rc001\tools\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: NUnit failed to load C:\a\1\s\FutureTbd\packages\SpecRun.Runner.1.6.0-rc001\tools\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1581098Z Information: NUnit Adapter 3.6.0.0: Test execution complete
+2016-11-27T00:34:04.1581098Z 
+2016-11-27T00:34:04.1891097Z Information: SpecRun: not SpecRun assembly - skip: C:\a\1\s\FutureTbd\FutureTbd.Tests\bin\Release\FutureTbd.Tests.dll
+2016-11-27T00:34:04.1891097Z 
+2016-11-27T00:34:04.3701102Z Information: SpecRun: running tests in C:\a\1\s\FutureTbd\FutureTbdAtdd\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+2016-11-27T00:34:04.3701102Z 
+2016-11-27T00:34:04.3711100Z Information: TFS Build integration mode
+2016-11-27T00:34:04.3711100Z 
+2016-11-27T00:34:04.3711100Z Information: Profile: Default
+2016-11-27T00:34:04.3711100Z 
+2016-11-27T00:34:05.5601176Z Passed   GivenRequestToSearch_WhenCallingSearch_ThenResultIsJsonResult
+2016-11-27T00:34:05.5601176Z Passed   GivenWhiteSpaceStringSearchText_WhenSearching_ThenSearchResultErrorIsSetCorrectly
+2016-11-27T00:34:06.5151175Z Information: Result: tests executed with warnings
+2016-11-27T00:34:06.5151175Z 
+2016-11-27T00:34:06.5161178Z Information:   Total: 0
+2016-11-27T00:34:06.5161178Z   Succeeded: 0
+2016-11-27T00:34:06.5161178Z   Ignored: 0
+2016-11-27T00:34:06.5161178Z   Pending: 0
+2016-11-27T00:34:06.5161178Z   Skipped: 0
+2016-11-27T00:34:06.5161178Z   Failed: 0
+2016-11-27T00:34:06.5161178Z 
+2016-11-27T00:34:06.5161178Z   Execution Time: 00:00:00.0739981
+2016-11-27T00:34:06.5161178Z 
+2016-11-27T00:34:06.5161178Z Information: Report file: file:///C:\a\1\s\TestResults\FutureTbdAtdd_Default_2016-11-27T003404.html
+2016-11-27T00:34:06.5161178Z 
+2016-11-27T00:34:06.5231175Z Information: Log file: file:///C:\a\1\s\TestResults\FutureTbdAtdd_Default_2016-11-27T003404.log
+2016-11-27T00:34:06.5231175Z 
+2016-11-27T00:34:06.5231175Z Information: SpecRun: not SpecRun assembly - skip: C:\a\1\s\FutureTbd\packages\NUnit3TestAdapter.3.6.0\tools\NUnit3.TestAdapter.dll
+2016-11-27T00:34:06.5231175Z 
+2016-11-27T00:34:06.5241173Z Information: SpecRun: running tests in C:\a\1\s\FutureTbd\packages\SpecRun.Runner.1.6.0-rc001\tools\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2016-11-27T00:34:06.5241173Z 
+2016-11-27T00:34:06.5241173Z Information: TFS Build integration mode
+2016-11-27T00:34:06.5251175Z 
+2016-11-27T00:34:06.5251175Z Information: Profile: 
+2016-11-27T00:34:06.5251175Z 
+2016-11-27T00:34:07.6091170Z Information: Result: tests executed with warnings
+2016-11-27T00:34:07.6091170Z 
+2016-11-27T00:34:07.6101167Z Information:   Total: 0
+2016-11-27T00:34:07.6101167Z   Succeeded: 0
+2016-11-27T00:34:07.6101167Z   Ignored: 0
+2016-11-27T00:34:07.6101167Z   Pending: 0
+2016-11-27T00:34:07.6101167Z   Skipped: 0
+2016-11-27T00:34:07.6101167Z   Failed: 0
+2016-11-27T00:34:07.6101167Z 
+2016-11-27T00:34:07.6101167Z   Execution Time: 00:00:00.0010004
+2016-11-27T00:34:07.6101167Z 
+2016-11-27T00:34:07.6111169Z Information: Report file: file:///C:\a\1\s\TestResults\Unnamed%20project__2016-11-27T003406.html
+2016-11-27T00:34:07.6111169Z 
+2016-11-27T00:34:07.6121220Z Information: Log file: file:///C:\a\1\s\TestResults\Unnamed%20project__2016-11-27T003406.log
+2016-11-27T00:34:07.6121220Z 
+2016-11-27T00:34:07.7981160Z Results File: C:\a\1\s\TestResults\buildguest_TASKAGENT5-0003 2016-11-27 00_34_03.trx
+2016-11-27T00:34:07.8001166Z 
+2016-11-27T00:34:07.8011167Z Attachments:
+2016-11-27T00:34:07.8011167Z   C:\a\1\s\TestResults\1ed7a347-538d-4bc9-9a8e-ab9ce3f99873\buildguest_TASKAGENT5-0003 2016-11-27 00_33_51.coverage
+2016-11-27T00:34:07.8021168Z   C:\Users\buildguest\AppData\Local\Temp\jtlkw4ou.gcm\FutureTbdAtdd_Default_2016-11-27T003404.log
+2016-11-27T00:34:07.8021168Z   C:\Users\buildguest\AppData\Local\Temp\jtlkw4ou.gcm\FutureTbdAtdd_Default_2016-11-27T003404.html
+2016-11-27T00:34:07.8021168Z   C:\Users\buildguest\AppData\Local\Temp\hngh13cd.l02\Unnamed project__2016-11-27T003406.log
+2016-11-27T00:34:07.8021168Z   C:\Users\buildguest\AppData\Local\Temp\hngh13cd.l02\Unnamed project__2016-11-27T003406.html
+2016-11-27T00:34:07.8021168Z 
+2016-11-27T00:34:07.8021168Z Total tests: 20. Passed: 20. Failed: 0. Skipped: 0.
+2016-11-27T00:34:07.8021168Z Test Run Successful.
+2016-11-27T00:34:07.8031158Z Test execution time: 15.9917 Seconds
+2016-11-27T00:34:08.0917159Z Publishing Test Results...
+2016-11-27T00:34:09.9093663Z Test results remaining: 20
+2016-11-27T00:34:11.2741410Z Published Test Run : https://future-tbd.visualstudio.com/future-tbd/_TestManagement/Runs#runId=2&_a=runCharts
+2016-11-27T00:34:11.3033076Z ##[section]Finishing: Test Assemblies **\*test*.dll;-:**\obj\**
+2016-11-27T00:34:11.3033076Z ##[section]Starting: Publish symbols path: 
+2016-11-27T00:34:11.3073067Z ==============================================================================
+2016-11-27T00:34:11.3073067Z Task         : Index Sources & Publish Symbols
+2016-11-27T00:34:11.3073067Z Description  : Index your source code and publish symbols to a file share
+2016-11-27T00:34:11.3073067Z Version      : 1.0.34
+2016-11-27T00:34:11.3073067Z Author       : Microsoft Corporation
+2016-11-27T00:34:11.3073067Z Help         : Index your source code and publish symbols to a file share<br/>[More Information](https://go.microsoft.com/fwlink/?LinkID=613722)
+2016-11-27T00:34:11.3073067Z ==============================================================================
+2016-11-27T00:34:14.4072308Z Found 9 files.
+2016-11-27T00:34:14.9352297Z ##[warning]Unsupported source provider 'GitHub' for source indexing.
+2016-11-27T00:34:14.9482279Z ##[warning]Unable to index sources.
+2016-11-27T00:34:14.9762288Z ##[section]Finishing: Publish symbols path: 
+2016-11-27T00:34:14.9762288Z ##[section]Starting: Publish Artifact: drop
+2016-11-27T00:34:14.9782288Z ==============================================================================
+2016-11-27T00:34:14.9782288Z Task         : Publish Build Artifacts
+2016-11-27T00:34:14.9782288Z Description  : Publish Build artifacts to the server or a file share
+2016-11-27T00:34:14.9782288Z Version      : 1.0.39
+2016-11-27T00:34:14.9782288Z Author       : Microsoft Corporation
+2016-11-27T00:34:14.9782288Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkID=708390)
+2016-11-27T00:34:14.9782288Z ==============================================================================
+2016-11-27T00:34:15.7302175Z ##[section]Async Command Start: Upload Artifact
+2016-11-27T00:34:15.7302175Z Uploading 5 files
+2016-11-27T00:34:19.2634804Z File upload succeed.
+2016-11-27T00:34:19.2634804Z Upload 'C:\a\1\a' to file container: '#/404741/drop'
+2016-11-27T00:34:19.4499787Z Associated artifact 6 with build 54
+2016-11-27T00:34:19.4499787Z ##[section]Async Command End: Upload Artifact
+2016-11-27T00:34:19.4499787Z ##[section]Finishing: Publish Artifact: drop
+2016-11-27T00:34:19.4499787Z ##[section]Starting: Post Job Cleanup
+2016-11-27T00:34:19.4609790Z Cleaning any cached credential from repository: thilde/future-tbd (Git)
+2016-11-27T00:34:19.4669794Z ##[command]git remote set-url origin https://github.com/thilde/future-tbd.git
+2016-11-27T00:34:19.5009863Z ##[command]git remote set-url --push origin https://github.com/thilde/future-tbd.git
+2016-11-27T00:34:19.5299798Z ##[section]Finishing: Post Job Cleanup
+2016-11-27T00:34:19.5309800Z ##[section]Finishing: Build
