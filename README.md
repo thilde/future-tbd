@@ -5,7 +5,7 @@
 Name              | Role
 ----------------- | -------------
 Robert Johnson    | Product Owner
-Mason Tan         | Scum Master
+Mason Tan         | Scum Master / Developer
 Khalid Aliweh     | Developer
 Tyler Hildebrandt | Developer
 
@@ -139,9 +139,9 @@ During this sprint, our team conducted five scrums. Mason, our Scrum Master, beg
   * Mason: I assisted Khalid with finding and implementing the proper API calls for our college search. 
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid: I will add output pulled from the API for certain data regarding the colleges, such as size and acceptance rates. Additionally, I will add more tests to our test suite. 
-  * Tyler: I will continue to work on with our CI/CD tools. 
-  * Mason: In the next 24 hours, I will continue to work with Khalid to implement our API calls and tests. 
+  * Khalid: I will add output pulled from the API for certain data regarding the colleges to the website, such as size and acceptance rates. Additionally, I will add more tests to our test suite. 
+  * Tyler: I will continue to configure our CI/CD tools to run a successful build. 
+  * Mason: I will continue to work with Khalid to implement our API calls and tests. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
   * There was much concern over what CI and CD tools to use for this sprint cycle. Different systems were suggested, and we weighed the pros and cons of each. Certain team members had more experience with various platforms, and time considerations were also discussed. This was by far the biggest impediment that we faced during this sprint, but eventually consensus was reached. 
@@ -151,7 +151,7 @@ Here is a screenshot of one of our team's mob programming sessions.
 ![alt text](need screenshot here)
 
 ### Continuous Integration and Deployment
-
+After much research, we decided to use Microsoft's Visual Studio Team Services for our CI/CD implementation. 
 
 ### Sprint Review
 At the end of the sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some feedback on the website. Here are a couple of key events from sprint review: 
