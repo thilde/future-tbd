@@ -139,10 +139,11 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
   * Lorem Ipsum 
   
 ### Mob Programming
+Here is a screenshot of one of our team's mob programming sessions.
+![alt text](need screenshot here)
 
-### Continuous Integration
+### Continuous Integration and Deployment
 
-### Continuous Deployment
 
 ### Sprint Review
 
