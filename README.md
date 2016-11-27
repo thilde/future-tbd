@@ -157,7 +157,7 @@ After much research, we decided to use Microsoft's Visual Studio Team Services f
 * Compatibility with Git.
 * Agile tools included if needed.
 
-The CI system automatically builds the code every time there is a merge to master and executes the tests upon each build. The CD system deploys the software to a stage environment where additional tests are being run and then deploys the software to a live production environment.
+The CI system automatically builds the code every time there is a merge to master and executes the tests upon each build. The 'Build.txt' log file is included in the repo to capture the build process. The CD system deploys the software to a stage environment where additional tests are being run and then deploys the software to a live production environment.
 
 ### Sprint Review
 At the end of the sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some feedback on the website. Here are a couple of key events from sprint review: 
