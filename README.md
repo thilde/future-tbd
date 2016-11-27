@@ -1,4 +1,4 @@
-# ![alt text][logo]
+# ![alt tag](https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true)
 
 ## Roster
 
