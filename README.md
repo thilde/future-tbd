@@ -128,7 +128,7 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 ### Daily Scrums
 
 * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
-  * Khalid: 
+  * Khalid:
   * Tyler: 
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
@@ -136,7 +136,7 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
   * Tyler: 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
-  * Lorem Ipsum 
+  * There was much concern over what CI and CD tools to use for this sprint cycle. Different systems were suggested, and we weighed the pros and cons of each. Certain team members had more experience with various platforms, and time considerations were also discussed. This was by far the biggest impediment that we faced during this sprint, but eventually consensus was reached. 
   
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
@@ -146,7 +146,7 @@ Here is a screenshot of one of our team's mob programming sessions.
 
 
 ### Sprint Review
-Halfway through this sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some early feedback on the website. Here are a couple of key events from sprint review: 
+At the end of the sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some early feedback on the website. Here are a couple of key events from sprint review: 
 * The Development Team presented a new version of the website with searchable colleges. 
 * Michael mentioned that he would liek to see either a calculation of college costs and/or a graphical representation on the website.
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
