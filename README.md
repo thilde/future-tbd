@@ -161,5 +161,5 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 
 ### Product
 
-URL: future-tbd.com
+URL: http://future-tbd.com/
 
