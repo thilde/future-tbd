@@ -136,10 +136,12 @@ During this sprint, our team conducted five scrums. Mason, our Scrum Master, beg
  * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
   * Khalid: I implemented API calls from the College Scorecard API. We can now search for a list of colleges in our web app.
   * Tyler: I worked on getting the continuous integration and continuous deployment systems running. 
+  * Mason: I assisted Khalid with finding and implementing the proper API calls for our college search. 
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
   * Khalid: I will add output pulled from the API for certain data regarding the colleges, such as size and acceptance rates. Additioanlly, I will add more tests to our test suite. 
   * Tyler: I will continue to work on our CI/CD tools. 
+  * Mason: In the next 24 hours, I will continue to work with Khalid to implement our API calls. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
   * There was much concern over what CI and CD tools to use for this sprint cycle. Different systems were suggested, and we weighed the pros and cons of each. Certain team members had more experience with various platforms, and time considerations were also discussed. This was by far the biggest impediment that we faced during this sprint, but eventually consensus was reached. 
