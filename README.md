@@ -88,7 +88,7 @@ The team completed a relative size estimating activity using [PlanITpoker](http:
 - **14 story points** to be completed
 
   - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
-  - The development team committed to these stories during sprint planning
+  - The development team committed to these stories during sprint planning.
   
 ### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
@@ -124,8 +124,8 @@ Halfway through our sprint, we conducted our first sprint review. Our stakeholde
 
 - **15 story points** to be completed
 
-  - We estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps.
-  - The development team committed to these stories during sprint planning
+  - Again, we estimated a 2 story points per team member per week. The sum story points for the first sprint came up to 16 sp but we only loaded the first sprint with 14 sps. Since we were able to complete 14 sps in the first sprint, we loaded the second sprint with 15 sps. 
+  - The development team committed to these stories during sprint planning.
   
 ### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
@@ -139,9 +139,9 @@ During this sprint, our team conducted five scrums. Mason, our Scrum Master, beg
   * Mason: I assisted Khalid with finding and implementing the proper API calls for our college search. 
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid: I will add output pulled from the API for certain data regarding the colleges, such as size and acceptance rates. Additioanlly, I will add more tests to our test suite. 
-  * Tyler: I will continue to work on our CI/CD tools. 
-  * Mason: In the next 24 hours, I will continue to work with Khalid to implement our API calls. 
+  * Khalid: I will add output pulled from the API for certain data regarding the colleges, such as size and acceptance rates. Additionally, I will add more tests to our test suite. 
+  * Tyler: I will continue to work on with our CI/CD tools. 
+  * Mason: In the next 24 hours, I will continue to work with Khalid to implement our API calls and tests. 
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
   * There was much concern over what CI and CD tools to use for this sprint cycle. Different systems were suggested, and we weighed the pros and cons of each. Certain team members had more experience with various platforms, and time considerations were also discussed. This was by far the biggest impediment that we faced during this sprint, but eventually consensus was reached. 
@@ -154,12 +154,12 @@ Here is a screenshot of one of our team's mob programming sessions.
 
 
 ### Sprint Review
-At the end of the sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some early feedback on the website. Here are a couple of key events from sprint review: 
+At the end of the sprint, we conducted our second sprint review. Our stakeholder, Michael Johnson, was again able to provide some feedback on the website. Here are a couple of key events from sprint review: 
 * The Development Team presented a new version of the website with searchable colleges. 
-* Michael mentioned that he would liek to see either a calculation of college costs and/or a graphical representation on the website.
+* Michael mentioned that he would now like to see either a calculation of college costs and/or a graphical representation on the website.
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
-## URL to Product
+### URL to Product
 
 [logo]: https://github.com/thilde/future-tbd/blob/master/logosmall.png?raw=true "future-tbd"
 
