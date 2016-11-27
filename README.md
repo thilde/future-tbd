@@ -148,7 +148,7 @@ During this sprint, our team conducted five scrums. Mason, our Scrum Master, beg
   
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
-![alt text](need screenshot here)
+![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_two.png "Mob Programming 2")
 
 ### Continuous Integration and Deployment
 After much research, we decided to use Microsoft's Visual Studio Team Services for our CI/CD implementation. 
