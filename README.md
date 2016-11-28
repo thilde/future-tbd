@@ -109,7 +109,7 @@ During our first sprint, our team conducted four scrums. Mason, our Scrum Master
   
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
-![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_one.png "Mob Programming")
+![alt text](https://slack-files.com/T26DTMQLE-F36PF1GEL-f3847b7270 "Mob Programming")
 
 
 ### Sprint Review
