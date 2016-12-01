@@ -26,7 +26,7 @@
                     <b> School Name</b>
                 </td>
                 <td>
-                    <b>Admission Rate</b>
+                    <b>Admission %</b>
                 </td>
                 <td>
                     <b>
@@ -38,6 +38,12 @@
                         Address
                     </b>
                 </td>
+                <td>
+                    <b>
+                        Highest Degree                    </b>
+                </td>
+                <td><b>Tuition (In-State)</b></td>
+                <td><b>Tuition (Out-Of-State)</b></td>
             </tr>
             </thead>
             <tbody>
@@ -48,6 +54,10 @@
                 <td data-bind="text: admissionOverallRate"></td>
                 <td data-bind="text: size"></td>
                 <td data-bind="text: address"></td>
+                <td data-bind="text: highestDegree()"></td>
+                <td data-bind="text:  inTution"></td>
+                <td data-bind="text:  outTution"></td>
+                
             </tr>
             <!--/ko-->
             </tbody>
