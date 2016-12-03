@@ -1,8 +1,16 @@
 ﻿@section scripts{
 
     @Scripts.Render("~/Scripts/Search/searchScript.js")
+    @Scripts.Render("~/Scripts/jquery.accrue.js")
+    <script type="text/javascript">
+        
+
+
+    </script>
+
 
 }
+@Styles.Render("~/Content/font-awesome.css")
 <div class="container">
     <div class="row">
         <div class="col-xs-12" style="margin-top: 40px;">
@@ -40,16 +48,29 @@
                 </td>
                 <td>
                     <b>
-                        Highest Degree                    </b>
+                        Highest Degree
+                    </b>
                 </td>
-                <td><b>Tuition (In-State)</b></td>
-                <td><b>Tuition (Out-Of-State)</b></td>
+                <td>
+                    <b>Tuition (In-State)</b>
+                </td>
+                <td>
+                    <b>Tuition (Out-Of-State)</b>
+                </td>
+                <td>
+                    <b>Avg Cost per Year</b>
+                </td>
+                <td>
+                    <b>Years of Attendance</b>
+                </td>
+                <td><b>Loan Calculator <span style="margin-left: 3px" class="fa fa-info-circle" title="Click here to calculate repayment options"></span></b></td>
             </tr>
             </thead>
             <tbody>
 
             <!-- ko foreach: SearchResultItems-->
             <tr>
+
                 <td data-bind="text: Name"></td>
                 <td data-bind="text: admissionOverallRate"></td>
                 <td data-bind="text: size"></td>
@@ -57,8 +78,12 @@
                 <td data-bind="text: highestDegree()"></td>
                 <td data-bind="text:  inTution"></td>
                 <td data-bind="text:  outTution"></td>
-                
+                <td data-bind="text:  avgCostOfAttendance"></td>
+                <td><input class="" type="number" data-bind="value: numberOfYears" style="width: 30px"/></td>
+                <td><span title="Calculate Loan" style="margin-left: 10px;" class="fa fa-calculator" data-bind="click: ShowCalculator"></span></td>
             </tr>
+
+
             <!--/ko-->
             </tbody>
 
@@ -70,3 +95,12 @@
 
 
 </div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="loanCalculator"aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="calculator"></div>    
+        </div>
+    </div>
+</div>
+

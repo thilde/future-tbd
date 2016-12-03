@@ -7,7 +7,7 @@ function SearchResultViewModel() {
     self.ExecuteSearch = function() {
         var value = $("#searchInput").val();
         $.ajax({
-            url: "Search/ExecuteSearch",
+            url: "ExecuteSearch",
             data: JSON.stringify({ 'searchText': value }),
             contentType: "application/json; charset=utf-8",
             type: "POST",
@@ -23,6 +23,8 @@ function SearchResultViewModel() {
             }
         });
     };
+
+  
 }
 
 ko.applyBindings(new SearchResultViewModel());
@@ -35,9 +37,25 @@ function ResultItem(result) {
     self.size = result["2014.student.size"];
     self.inTution = result["2013.cost.tuition.in_state"] === null ? 'N/A' :'$'+ result["2013.cost.tuition.in_state"];
     self.outTution = result["2013.cost.tuition.out_of_state"] === null ? 'N/A' : '$' + result["2013.cost.tuition.out_of_state"];
+    self.avgCostOfAttendance = result["2013.cost.attendance.academic_year"] === null ? 0 : '$' + result["2013.cost.attendance.academic_year"];
+    self.numberOfYears = ko.observable(4);
+
+    self.ShowCalculator = function() {
+        $(".calculator").accrue({
+            mode: "amortization",
+            default_values: {
+                amount: "$" + (self.numberOfYears() * result["2013.cost.attendance.academic_year"]),
+                rate: "6%",
+                rate_compare: "100.49%",
+                term: "10y"
+            }
+        });
+        $(".accrue-amortization").addClass("table");
+        $(".accrue-amortization").addClass("table-striped");
 
 
-
+        $('#loanCalculator').modal();
+    };
 
     self.highestDegree = ko.computed(function() {
         var degree = result["school.degrees_awarded.highest"];
