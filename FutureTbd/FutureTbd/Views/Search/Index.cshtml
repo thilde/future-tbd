@@ -1,16 +1,15 @@
-﻿@section scripts{
+﻿@{
+    ViewBag.Title = "Future TBD | Search";
+}
 
+@section scripts{
     @Scripts.Render("~/Scripts/Search/searchScript.js")
     @Scripts.Render("~/Scripts/jquery.accrue.js")
     <script type="text/javascript">
-        
-
-
     </script>
-
-
 }
 @Styles.Render("~/Content/font-awesome.css")
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12" style="margin-top: 40px;">
@@ -64,6 +63,7 @@
                     <b>Years of Attendance</b>
                 </td>
                 <td><b>Loan Calculator <span style="margin-left: 3px" class="fa fa-info-circle" title="Click here to calculate repayment options"></span></b></td>
+                <td></td>
             </tr>
             </thead>
             <tbody>
@@ -81,6 +81,8 @@
                 <td data-bind="text:  avgCostOfAttendance"></td>
                 <td><input class="" type="number" data-bind="value: numberOfYears" style="width: 30px"/></td>
                 <td><span title="Calculate Loan" style="margin-left: 10px;" class="fa fa-calculator" data-bind="click: ShowCalculator"></span></td>
+                <td data-bind="visible: !isInCompareList()"><a data-bind="click:$parent.addToCompareList"><span class="glyphicon glyphicon-plus"></span></a></td>
+                <td data-bind="visible: isInCompareList()"><a data-bind="click:$parent.removeFromCompareList"><span class="glyphicon glyphicon-minus"></span></a></td>
             </tr>
 
 
@@ -104,3 +106,6 @@
     </div>
 </div>
 
+
+
+<input data-bind="click: clearList" class="btn btn-info" />

@@ -84,6 +84,18 @@ namespace FutureTbd.Tests.Controllers
         }
 
         [Test]
+        public void GivenCallToSearch_WhenSearchingText_ThenResultIsJsonResultOfSerachResultObject()
+        {
+            var mockEndpoint = Mock.Of<IDataEndpoint>();
+            var searchResult=new SearchResult {ResultString = "test"};
+            Mock.Get(mockEndpoint).Setup(m => m.Search(It.IsAny<string>())).Returns(searchResult);
+            var controller = new SearchController(mockEndpoint);
+           JsonResult result= controller.ExecuteSearch("search term");
+
+           Assert.That(result.Data as SearchResult, Is.EqualTo(searchResult));
+        }
+
+        [Test]
         public void GivenCallToSearch_WhenSearchingText_ThenSearchEndpointIsCalledWithCorrectParameter()
         {
             const string searchText = "search Text";
