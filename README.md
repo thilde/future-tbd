@@ -168,6 +168,34 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 * Michael mentioned that he would now like to see either a calculation of college costs and/or a graphical representation on the website.
 * The Product Owner was satisfied with Development Team's progress on actualizing the user stories. 
 
+## Sprint #3
+
+### Forecast
+
+- **21 story points** to be completed
+
+  - For the final sprint, the development team decided that they would be able to handle a slightly larger work load. 
+  - The development team committed to these stories during sprint planning.
+  
+### Burndown chart
+The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
+
+### Daily Scrums
+During out final sprint, our team conducted six scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum:
+
+ * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
+  * Khalid: We implemented our compare functionality with a new view page on the website. 
+  * Tyler: I assisted Khalid in working on the comparison functionality.
+  * Mason: I worked on adding test cases into our test suite. 
+  
+ * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
+  * Khalid: I will continue to implement our comparison tool. 
+  * Tyler: I will help Khalid with said implementation. 
+  * Mason: I will add more test cases for our testing infrastructure. 
+
+* **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
+  * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up diffrent ideas and suggestions for how to show comparisons between colleges. 
+
 ### Product
 
 URL: http://future-tbd.com/
