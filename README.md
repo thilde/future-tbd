@@ -174,7 +174,8 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 
 - **21 story points** to be completed
 
-  - For the final sprint, the development team decided that they would be able to handle a slightly larger work load. 
+  - For the final sprint, the development team decided that they would be able to handle a slightly larger work load due to availability in these two weeks.
+  - Using Yesterday's Weather forecasting pattern, the number of story points completed in the last Sprint is 15. With the additional work load considered, the total story points come up to 21.
   - The development team committed to these stories during sprint planning.
   
 ### Burndown chart
@@ -184,29 +185,28 @@ The burndown chart can be found here https://BurndownForTrello.com/share/ud549bk
 During out final sprint, our team conducted six scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum:
 
  * **What did you do in the last 24 hours that helped the Development Team meet the Sprint Goal?**
-  * Khalid: We implemented our compare functionality with a new view page on the website. 
+  * Khalid: We implemented our compare functionality with a new view page on the website.
   * Tyler: I assisted Khalid in working on the comparison functionality.
-  * Mason: I worked on adding test cases into our test suite. 
+  * Mason: I worked on adding test cases into our test suite.
   
  * **What will you do in the next 24 hours to help the Development Team meet the Sprint Goal?**
-  * Khalid: I will continue to implement our comparison tool. 
-  * Tyler: I will help Khalid with said implementation. 
-  * Mason: I will add more test cases for our testing infrastructure. 
+  * Khalid: I will continue to implement our comparison tool.
+  * Tyler: I will help Khalid with said implementation.
+  * Mason: I will add more test cases for our testing infrastructure.
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
-  * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up diffrent ideas and suggestions for how to show comparisons between colleges. 
+  * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up diffrent ideas and suggestions for how to show comparisons between colleges.
   
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
-![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_two.png "Mob Programming 3")
+![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_three.png "Mob Programming 3")
 
 ### Continuous Integration and Deployment
-We continued to use Microsoft services for this sprint. 
+We continued to use Microsoft's Visual Studio Team Services for this sprint. 
 
 ### Sprint Review
 We will be holding our sprint review in our final class, on December 12th. 
 
 ### Product
-
 URL: http://future-tbd.com/
 
