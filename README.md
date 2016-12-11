@@ -195,6 +195,16 @@ During out final sprint, our team conducted six scrums. Mason, our Scrum Master,
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
   * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up diffrent ideas and suggestions for how to show comparisons between colleges. 
+  
+### Mob Programming
+Here is a screenshot of one of our team's mob programming sessions.
+![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_two.png "Mob Programming 3")
+
+### Continuous Integration and Deployment
+We continued to use Microsoft services for this sprint. 
+
+### Sprint Review
+We will be holding our sprint review in our final class, on December 12th. 
 
 ### Product
 
