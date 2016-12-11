@@ -46,8 +46,7 @@ namespace FutureTbd.Controllers
         {
             if (searchText == null)
             {
-                    
-                return  Json(new SearchResult {Error = NULL_SEARCH_RESULT_ERROR_MESSAGE});
+                return Json(new SearchResult {Error = NULL_SEARCH_RESULT_ERROR_MESSAGE});
             }
             if (string.IsNullOrWhiteSpace(searchText))
             {
@@ -59,13 +58,36 @@ namespace FutureTbd.Controllers
             }
             if (searchText.Length >= MAXIMUM_SEARCH_TERM_LENGTH)
             {
-                return Json(new SearchResult { Error = LongSearchTermErrorMessage() });
+                return Json(new SearchResult {Error = LongSearchTermErrorMessage()});
             }
 
-            //todo 
             ViewBag.Title = SEARCH_PAGE_TITLE;
 
             return Json(_dataEndpoint.Search(searchText));
+        }
+
+        public ActionResult SearchByState()
+        {
+            ViewBag.Title = SEARCH_PAGE_TITLE;
+
+            return View("SearchByState");
+        }
+
+        [HttpPost]
+        public JsonResult ExecuteSearchByState(string state)
+        {
+            if (state == null)
+            {
+                return Json(new SearchResult {Error = NULL_SEARCH_RESULT_ERROR_MESSAGE});
+            }
+            if (string.IsNullOrWhiteSpace(state))
+            {
+                return Json(new SearchResult {Error = EMPTY_SEARCH_RESULT_ERROR_MESSAGE});
+            }
+
+            ViewBag.Title = SEARCH_PAGE_TITLE;
+
+            return Json(_dataEndpoint.SearchByState(state));
         }
     }
 }

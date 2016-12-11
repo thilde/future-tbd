@@ -206,6 +206,109 @@ namespace FutureTbd.Tests.Controllers
 
         #endregion
 
+        #region SearchByState Tests
+
+        [Test]
+        public void GivenRequestToSearchByState_WhenCallingIndex_ThenResultIsNotNull()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState("NH");
+
+            Assert.That(result, Is.Not.Null);
+        }
+
+        [Test]
+        public void GivenRequestToSearchByState_WhenCallingSearch_ThenResultIsJsonResult()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState("NH");
+
+            Assert.That(result, Is.TypeOf<JsonResult>());
+        }
+
+        [Test]
+        public void GivenCallToSearchByState_WhenSearchingText_ThenSearchEndpointIsCalled()
+        {
+            var mockEndpoint = Mock.Of<IDataEndpoint>();
+            var controller = new SearchController(mockEndpoint);
+            controller.ExecuteSearchByState("MA");
+
+            Mock.Get(mockEndpoint).Verify(m => m.SearchByState(It.IsAny<string>()), Times.Once());
+        }
+
+        [Test]
+        public void GivenCallToSearchByState_WhenSearchingText_ThenResultIsJsonResultOfSerachResultObject()
+        {
+            var mockEndpoint = Mock.Of<IDataEndpoint>();
+            var searchResult = new SearchResult { ResultString = "test" };
+            Mock.Get(mockEndpoint).Setup(m => m.SearchByState(It.IsAny<string>())).Returns(searchResult);
+            var controller = new SearchController(mockEndpoint);
+            JsonResult result = controller.ExecuteSearchByState("MA");
+
+            Assert.That(result.Data as SearchResult, Is.EqualTo(searchResult));
+        }
+
+        [Test]
+        public void GivenCallToSearchByState_WhenSearchingText_ThenSearchEndpointIsCalledWithCorrectParameter()
+        {
+            const string state = "MA";
+            var mockEndpoint = Mock.Of<IDataEndpoint>();
+            var controller = new SearchController(mockEndpoint);
+            controller.ExecuteSearchByState(state);
+
+            Mock.Get(mockEndpoint).Verify(m => m.SearchByState(state), Times.Once());
+        }
+
+        [Test]
+        public void GivenNullSearchByState_WhenSearching_ThenJsonIsReturned()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState(null);
+
+            Assert.That(result, Is.TypeOf<JsonResult>());
+        }
+
+        [Test]
+        public void GivenNullSearchByState_WhenSearching_ThenSearchResultErrorIsSetCorrectly()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState(null);
+            var searchResult = result.Data as SearchResult;
+            Assert.That(searchResult.Error, Is.EqualTo(SearchController.NULL_SEARCH_RESULT_ERROR_MESSAGE));
+        }
+
+        [Test]
+        public void GivenEmptyStringSearchByState_WhenSearching_ThenSearchResultErrorIsSetCorrectly()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState("");
+            var searchresult = result.Data as SearchResult;
+            Assert.That(searchresult?.Error, Is.EqualTo(SearchController.EMPTY_SEARCH_RESULT_ERROR_MESSAGE));
+        }
+
+        [Test]
+        public void GivenWhiteSpaceStringSearchByState_WhenSearching_ThenSearchResultErrorIsSetCorrectly()
+        {
+            SearchController controller = NewSearchController();
+
+            var result = controller.ExecuteSearchByState("      ");
+            var searchResult = result.Data as SearchResult;
+            Assert.That(searchResult?.Error, Is.EqualTo(SearchController.EMPTY_SEARCH_RESULT_ERROR_MESSAGE));
+        }
+
+     
+
+        #endregion
+
+
+
+
+
         #region Testing Helpers
 
         private const string SearchTermWithMaximumLength =

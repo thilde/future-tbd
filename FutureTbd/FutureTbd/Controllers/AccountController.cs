@@ -28,10 +28,6 @@ namespace FutureTbd.Controllers
 
         public AccountController()
         {
-            //master commit
-            //master commit 2
-            //change in branch
-            //change in branch 2
         }
 
         public AccountController(ApplicationUserManager userManager,
