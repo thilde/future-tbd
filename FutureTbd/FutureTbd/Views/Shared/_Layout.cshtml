@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/font-awesome.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -22,8 +23,8 @@
         </div>
         <div class="navbar-header pull-right">
 
-            <a href="/Compare/Index" title="Future TBD Home" style="cursor: pointer;">
-                <span class="fa fa-list-ol"></span><label style="margin-left: 10px;">Compare Colleges</label>
+            <a href="/Compare/Index" title="Compare List" style="cursor: pointer;">
+                <h4 style="margin-left: 10px;">Compare Colleges <span class="fa fa-list-ol"></span></h4>
             </a>
         </div>
         
@@ -32,7 +33,7 @@
 <div class="container body-content">
     @RenderBody()
     <hr/>
-    <footer>
+    <footer style="color: white;">
         <p>&copy; @DateTime.Now.Year - Future TBD Application</p>
     </footer>
 </div>

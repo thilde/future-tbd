@@ -1,17 +1,25 @@
 ﻿@{
     ViewBag.Title = "Future TBD | Home";
 }
-
-<div class="container">
+@Styles.Render("~/Content/home.css")
+<div class="container" style="min-height: 800px;">
     <div class="row" style="margin-top: 45px;">
-        <div class="col-xs-12">
-            @Html.ActionLink("Search Colleges by Name", "Index", "Search")
+        <div class="col-xs-6">
+
+          
+            <a href="/Search/Index" style="cursor: pointer; color: black;">
+                <h3>Search Colleges by Name <span class="fa fa-search"></span></h3>
+                
+            </a>
+            <a href="/Search/SearchByState" style="cursor: pointer; color: black;">
+                <h3>Search Colleges by State <span class="fa fa-search"></span></h3>
+
+            </a>
+
+          
 
         </div>
-        <div class="col-xs-12">
-            @Html.ActionLink("Search Colleges by State", "SearchByState", "Search")
-
-        </div>
+       
 
     </div>
 </div>
