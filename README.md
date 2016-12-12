@@ -195,8 +195,8 @@ During out final sprint, our team conducted six scrums. Mason, our Scrum Master,
   * Mason: I will add more test cases for our testing infrastructure.
 
 * **Do you see any impediment that prevents me or the Development Team from meeting the Sprint Goal?**
-  * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up diffrent ideas and suggestions for how to show comparisons between colleges.
-  
+  * A chief impediment for our website was deciding how exactly our compare functionality would work. We offered up different ideas and suggestions for how to show comparisons between colleges.
+
 ### Mob Programming
 Here is a screenshot of one of our team's mob programming sessions.
 ![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_three.png "Mob Programming 3")
