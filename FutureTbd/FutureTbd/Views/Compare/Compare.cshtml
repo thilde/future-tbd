@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Compare";
+}
+
+<h2>Compare</h2>
+
+@section scripts{
+
+@Scripts.Render("~/Scripts/jquery.accrue.js")
+    @Scripts.Render("~/Scripts/Compare.js")
+
+}
+@Styles.Render("~/Content/font-awesome.css")
+<div class="container">
+    <div class="row">
+        <!-- ko foreach: compareList() -->
+        <div class="col-xs-3">
+            <div class="panel panel-default">
+  
+                    <div class="panel-heading" data-bind="text: item.Name"></div>
+               
+
+                <div class="panel-body">
+
+                    <label>Admission Overall Rate</label><p data-bind="text:  item.admissionOverallRate"></p>
+                    <label>Size</label> <p data-bind="text:  item.size"></p>
+                    <label>Address</label><p data-bind="text:  item.address"></p>
+                    <label>Highest Degree</label><p data-bind="text:  item.maxDegree"></p>
+                    <label>Tuition In State</label><p data-bind="text:  item.inTution"></p>
+                    <label>Tuition Out State</label><p data-bind="text:  item.outTution"></p>
+                    <label>Avg Cost Of Attendance</label><p data-bind="text:  item.avgCostOfAttendance"></p>
+                    <label>Total Years</label><p><input class="" type="number" data-bind="value: item.years" style="width: 30px"/> </p>
+                    <label>Loan Calculator</label><p><span title="Calculate Loan" style="margin-left: 10px;" class="fa fa-calculator" data-bind="click: ShowCalculator"></span></p>
+                    <div class="row text-right">
+                        <button class="btn btn-danger" style="margin-right: 15px;"  data-bind="click: $parent.remove"><span class="glyphicon glyphicon-trash" style="float: right;"></span> </button>
+                        
+                    </div>
+                    
+
+
+                </div>
+            </div>
+
+        </div>
+        <!--/ko-->
+    </div>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="loanCalculator" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="calculator"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
