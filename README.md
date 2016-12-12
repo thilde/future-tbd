@@ -210,7 +210,7 @@ Here is another screenshot that summarizes our CI/CD processs using one of our b
 ![alt text](https://github.com/thilde/future-tbd/blob/master/CICD Summary 2.png "CICD Summary 2")
 
 ### Sprint Review
-We will be holding our sprint review in our final class, on December 12th. We had a practice session for the spritn review on December 11th. 
+We will be holding our sprint review in our final class, on December 12th. We had a practice session for the sprint review on December 11th.
 
 ### Product
 URL: http://future-tbd.com/
