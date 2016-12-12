@@ -202,10 +202,15 @@ Here is a screenshot of one of our team's mob programming sessions.
 ![alt text](https://github.com/thilde/future-tbd/blob/master/mob_programming_sprint_three.png "Mob Programming 3")
 
 ### Continuous Integration and Deployment
-We continued to use Microsoft's Visual Studio Team Services for this sprint. 
+We continued to use Microsoft's Visual Studio Team Services for this sprint.
+
+The CI system automatically builds the code every time there is a merge to master and executes the tests upon each build. The 'Build 2.txt' log file is included in the repo to capture the build process. The CD system deploys the software to a stage environment where additional tests are being run and then deploys the software to a live production environment.
+
+Here is another screenshot that summarizes our CI/CD processs using one of our builds/releases for this sprint.
+![alt text](https://github.com/thilde/future-tbd/blob/master/CICD Summary 2.png "CICD Summary 2")
 
 ### Sprint Review
-We will be holding our sprint review in our final class, on December 12th. 
+We will be holding our sprint review in our final class, on December 12th.
 
 ### Product
 URL: http://future-tbd.com/
