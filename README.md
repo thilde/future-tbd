@@ -181,6 +181,10 @@ At the end of the sprint, we conducted our second sprint review. Our stakeholder
 ### Burndown chart
 The burndown chart can be found here https://BurndownForTrello.com/share/ud549bkub6
 
+Upon receiving feedback from last sprint and due to the lack of settings and customizations using BurndownForTrello to satisfy the project rubric specifications, below would be a more accurate burndown chart for this sprint.
+
+![alt text](https://github.com/thilde/future-tbd/blob/master/sprint_3_burndown_chart.png "Sprint 3 Burndown Chart")
+
 ### Daily Scrums
 During out final sprint, our team conducted six scrums. Mason, our Scrum Master, began each scrum asking the Development Team members what they had been working on and what impediments they were facing. Here is an example of a daily scrum:
 
